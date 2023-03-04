@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14429B35B7400E6B193 /* AppDelegate.swift */; };
 		FACFF14729B35B7400E6B193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14629B35B7400E6B193 /* SceneDelegate.swift */; };
-		FACFF14929B35B7400E6B193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14829B35B7400E6B193 /* ViewController.swift */; };
 		FACFF14C29B35B7400E6B193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFF14A29B35B7400E6B193 /* Main.storyboard */; };
 		FACFF14E29B35B7600E6B193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACFF14D29B35B7600E6B193 /* Assets.xcassets */; };
 		FACFF15129B35B7600E6B193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACFF14F29B35B7600E6B193 /* LaunchScreen.storyboard */; };
 		FACFF15C29B35B7700E6B193 /* Mobven_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF15B29B35B7700E6B193 /* Mobven_ProjectTests.swift */; };
 		FACFF16629B35B7700E6B193 /* Mobven_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF16529B35B7700E6B193 /* Mobven_ProjectUITests.swift */; };
 		FACFF16829B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF16729B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift */; };
+		FAD3B40629B3BBAF00EB97C8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3B40529B3BBAF00EB97C8 /* RegisterViewController.swift */; };
+		FAD3B40729B3BD8F00EB97C8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FADC2E5929B3911C00485933 /* Montserrat-Bold.ttf */; };
+		FAD3B40929B3BF0E00EB97C8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3B40829B3BF0E00EB97C8 /* UIView+Extensions.swift */; };
+		FAD3B40B29B3C07200EB97C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */; };
 		FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADC2E5E29B393F200485933 /* Colors.xcassets */; };
+		FADC2E6129B39A8000485933 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC2E6029B39A8000485933 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,6 @@
 		FACFF14129B35B7400E6B193 /* MobvenDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFF14429B35B7400E6B193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACFF14629B35B7400E6B193 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FACFF14829B35B7400E6B193 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACFF14B29B35B7400E6B193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACFF14D29B35B7600E6B193 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACFF15029B35B7600E6B193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		FACFF16729B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobven_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FACFF17529B35BF500E6B193 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FACFF17629B35C0100E6B193 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		FAD3B40529B3BBAF00EB97C8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FAD3B40829B3BF0E00EB97C8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FADC2E4C29B3911C00485933 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		FADC2E4D29B3911C00485933 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		FADC2E4E29B3911C00485933 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 		FADC2E5C29B3911D00485933 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		FADC2E5D29B3911D00485933 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		FADC2E5E29B393F200485933 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FADC2E6029B39A8000485933 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				FADC2E4A29B3887100485933 /* Common */,
-				FACFF14829B35B7400E6B193 /* ViewController.swift */,
+				FADC2E6029B39A8000485933 /* WelcomeViewController.swift */,
+				FAD3B40529B3BBAF00EB97C8 /* RegisterViewController.swift */,
+				FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */,
+				FAD3B40829B3BF0E00EB97C8 /* UIView+Extensions.swift */,
 				FACFF15229B35B7600E6B193 /* Info.plist */,
 			);
 			path = "Mobven-Project";
@@ -298,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD3B40729B3BD8F00EB97C8 /* Montserrat-Bold.ttf in Resources */,
 				FACFF15129B35B7600E6B193 /* LaunchScreen.storyboard in Resources */,
 				FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */,
 				FACFF14E29B35B7600E6B193 /* Assets.xcassets in Resources */,
@@ -326,9 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACFF14929B35B7400E6B193 /* ViewController.swift in Sources */,
+				FAD3B40B29B3C07200EB97C8 /* LoginViewController.swift in Sources */,
+				FADC2E6129B39A8000485933 /* WelcomeViewController.swift in Sources */,
 				FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */,
+				FAD3B40929B3BF0E00EB97C8 /* UIView+Extensions.swift in Sources */,
 				FACFF14729B35B7400E6B193 /* SceneDelegate.swift in Sources */,
+				FAD3B40629B3BBAF00EB97C8 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

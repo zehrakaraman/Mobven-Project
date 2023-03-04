@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FACFF14029B35B7400E6B193"
-               BuildableName = "Mobven-Project.app"
+               BuildableName = "MobvenDev.app"
                BlueprintName = "Mobven-Project"
                ReferencedContainer = "container:Mobven-Project.xcodeproj">
             </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FACFF14029B35B7400E6B193"
-            BuildableName = "Mobven-Project.app"
+            BuildableName = "MobvenDev.app"
             BlueprintName = "Mobven-Project"
             ReferencedContainer = "container:Mobven-Project.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FACFF14029B35B7400E6B193"
-            BuildableName = "Mobven-Project.app"
+            BuildableName = "MobvenDev.app"
             BlueprintName = "Mobven-Project"
             ReferencedContainer = "container:Mobven-Project.xcodeproj">
          </BuildableReference>
