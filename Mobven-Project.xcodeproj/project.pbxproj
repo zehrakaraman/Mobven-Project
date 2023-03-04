@@ -16,6 +16,7 @@
 		FACFF15C29B35B7700E6B193 /* Mobven_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF15B29B35B7700E6B193 /* Mobven_ProjectTests.swift */; };
 		FACFF16629B35B7700E6B193 /* Mobven_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF16529B35B7700E6B193 /* Mobven_ProjectUITests.swift */; };
 		FACFF16829B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF16729B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift */; };
+		FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADC2E5E29B393F200485933 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,25 @@
 		FACFF16729B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobven_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FACFF17529B35BF500E6B193 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FACFF17629B35C0100E6B193 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		FADC2E4C29B3911C00485933 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		FADC2E4D29B3911C00485933 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E4E29B3911C00485933 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		FADC2E4F29B3911C00485933 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FADC2E5029B3911C00485933 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5129B3911C00485933 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5229B3911C00485933 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5329B3911C00485933 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		FADC2E5429B3911C00485933 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		FADC2E5529B3911C00485933 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		FADC2E5629B3911C00485933 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		FADC2E5729B3911C00485933 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5829B3911C00485933 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FADC2E5929B3911C00485933 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		FADC2E5A29B3911D00485933 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5B29B3911D00485933 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5C29B3911D00485933 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FADC2E5D29B3911D00485933 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		FADC2E5E29B393F200485933 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +122,8 @@
 		FACFF14329B35B7400E6B193 /* Mobven-Project */ = {
 			isa = PBXGroup;
 			children = (
-				FACFF14429B35B7400E6B193 /* AppDelegate.swift */,
-				FACFF14629B35B7400E6B193 /* SceneDelegate.swift */,
+				FADC2E4A29B3887100485933 /* Common */,
 				FACFF14829B35B7400E6B193 /* ViewController.swift */,
-				FACFF14A29B35B7400E6B193 /* Main.storyboard */,
-				FACFF14D29B35B7600E6B193 /* Assets.xcassets */,
-				FACFF14F29B35B7600E6B193 /* LaunchScreen.storyboard */,
 				FACFF15229B35B7600E6B193 /* Info.plist */,
 			);
 			path = "Mobven-Project";
@@ -137,6 +153,45 @@
 				FACFF17629B35C0100E6B193 /* Production.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FADC2E4A29B3887100485933 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FACFF14429B35B7400E6B193 /* AppDelegate.swift */,
+				FACFF14629B35B7400E6B193 /* SceneDelegate.swift */,
+				FACFF14A29B35B7400E6B193 /* Main.storyboard */,
+				FACFF14D29B35B7600E6B193 /* Assets.xcassets */,
+				FADC2E5E29B393F200485933 /* Colors.xcassets */,
+				FADC2E4B29B390BB00485933 /* Fonts */,
+				FACFF14F29B35B7600E6B193 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FADC2E4B29B390BB00485933 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FADC2E5329B3911C00485933 /* Montserrat-Black.ttf */,
+				FADC2E5229B3911C00485933 /* Montserrat-BlackItalic.ttf */,
+				FADC2E5929B3911C00485933 /* Montserrat-Bold.ttf */,
+				FADC2E5B29B3911D00485933 /* Montserrat-BoldItalic.ttf */,
+				FADC2E4F29B3911C00485933 /* Montserrat-ExtraBold.ttf */,
+				FADC2E5C29B3911D00485933 /* Montserrat-ExtraBoldItalic.ttf */,
+				FADC2E5829B3911C00485933 /* Montserrat-ExtraLight.ttf */,
+				FADC2E5729B3911C00485933 /* Montserrat-ExtraLightItalic.ttf */,
+				FADC2E5529B3911C00485933 /* Montserrat-Italic.ttf */,
+				FADC2E5629B3911C00485933 /* Montserrat-Light.ttf */,
+				FADC2E4D29B3911C00485933 /* Montserrat-LightItalic.ttf */,
+				FADC2E5D29B3911D00485933 /* Montserrat-Medium.ttf */,
+				FADC2E5029B3911C00485933 /* Montserrat-MediumItalic.ttf */,
+				FADC2E4E29B3911C00485933 /* Montserrat-Regular.ttf */,
+				FADC2E5429B3911C00485933 /* Montserrat-SemiBold.ttf */,
+				FADC2E5129B3911C00485933 /* Montserrat-SemiBoldItalic.ttf */,
+				FADC2E4C29B3911C00485933 /* Montserrat-Thin.ttf */,
+				FADC2E5A29B3911D00485933 /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACFF15129B35B7600E6B193 /* LaunchScreen.storyboard in Resources */,
+				FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */,
 				FACFF14E29B35B7600E6B193 /* Assets.xcassets in Resources */,
 				FACFF14C29B35B7400E6B193 /* Main.storyboard in Resources */,
 			);
@@ -456,7 +512,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobven-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -486,7 +542,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobven-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -657,7 +713,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobven-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -782,7 +838,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mobven-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
