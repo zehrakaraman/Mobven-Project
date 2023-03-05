@@ -167,7 +167,6 @@ your phone number</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xbA-qG-CxA"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -180,10 +179,10 @@ our Terms and Condition</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAD-yh-Sld">
-                                <rect key="frame" x="288.66666666666669" y="754" width="71.333333333333314" height="60"/>
+                                <rect key="frame" x="300" y="754" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="P6A-Pz-BnR"/>
-                                    <constraint firstAttribute="width" secondItem="CAD-yh-Sld" secondAttribute="height" multiplier="144:121" id="zF1-zQ-M3G"/>
+                                    <constraint firstAttribute="width" secondItem="CAD-yh-Sld" secondAttribute="height" multiplier="1:1" id="zF1-zQ-M3G"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
@@ -229,17 +228,112 @@ our Terms and Condition</string>
                     <view key="view" contentMode="scaleToFill" id="V3d-k2-H3h">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-lower" translatesAutoresizingMaskIntoConstraints="NO" id="Zmj-BM-hGI">
+                                <rect key="frame" x="-30" y="244" width="450" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="d85-sV-eoJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="securityImage" translatesAutoresizingMaskIntoConstraints="NO" id="pdC-LY-YLE">
+                                <rect key="frame" x="30" y="46.999999999999986" width="330" height="233.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esR-4S-Ieh">
+                                <rect key="frame" x="30" y="310.66666666666669" width="154.66666666666666" height="34.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-bU-c0M">
+                                <rect key="frame" x="30" y="395" width="25.666666666666671" height="14.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0a8-HT-p9b">
+                                <rect key="frame" x="30" y="416.66666666666669" width="330" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JQ-Ip-1a8">
+                                        <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="50"/>
+                                        <color key="backgroundColor" name="Purple - Soft"/>
+                                        <color key="textColor" name="Blue - Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziz-ob-t6X">
+                                        <rect key="frame" x="83.666666666666671" y="0.0" width="79.000000000000014" height="50"/>
+                                        <color key="backgroundColor" name="Purple - Soft"/>
+                                        <color key="textColor" name="Blue - Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pB6-Sz-Dz5">
+                                        <rect key="frame" x="167.66666666666666" y="0.0" width="78.666666666666657" height="50"/>
+                                        <color key="backgroundColor" name="Purple - Soft"/>
+                                        <color key="textColor" name="Blue - Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iqw-dg-cRc">
+                                        <rect key="frame" x="251.33333333333329" y="0.0" width="78.666666666666657" height="50"/>
+                                        <color key="backgroundColor" name="Purple - Soft"/>
+                                        <color key="textColor" name="Blue - Dark"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dIL-Qy-YzJ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y38-XF-f0G">
+                                <rect key="frame" x="300" y="754" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B5H-0p-gIP"/>
+                                    <constraint firstAttribute="width" secondItem="y38-XF-f0G" secondAttribute="height" multiplier="1:1" id="YZZ-GT-KuE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="vxg-b5-5a0" eventType="touchUpInside" id="jdf-1L-BxH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bsi-1s-CaU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="y38-XF-f0G" secondAttribute="bottom" constant="30" id="0nM-cC-IjE"/>
+                            <constraint firstAttribute="trailing" secondItem="y38-XF-f0G" secondAttribute="trailing" constant="30" id="6C2-Ov-NOD"/>
+                            <constraint firstItem="pdC-LY-YLE" firstAttribute="top" secondItem="Bsi-1s-CaU" secondAttribute="top" id="6Mv-bA-YvF"/>
+                            <constraint firstItem="0a8-HT-p9b" firstAttribute="top" secondItem="C0M-bU-c0M" secondAttribute="bottom" constant="7" id="8lc-FJ-8TJ"/>
+                            <constraint firstItem="Bsi-1s-CaU" firstAttribute="trailing" secondItem="0a8-HT-p9b" secondAttribute="trailing" constant="30" id="Ozv-Ql-CXG"/>
+                            <constraint firstAttribute="trailing" secondItem="Zmj-BM-hGI" secondAttribute="trailing" constant="-30" id="S3l-Vl-o2v"/>
+                            <constraint firstItem="Zmj-BM-hGI" firstAttribute="leading" secondItem="V3d-k2-H3h" secondAttribute="leading" constant="-30" id="f12-mw-ghm"/>
+                            <constraint firstItem="esR-4S-Ieh" firstAttribute="leading" secondItem="Bsi-1s-CaU" secondAttribute="leading" constant="30" id="iif-L3-OWK"/>
+                            <constraint firstItem="pdC-LY-YLE" firstAttribute="leading" secondItem="Bsi-1s-CaU" secondAttribute="leading" constant="30" id="mIZ-6X-9Eq"/>
+                            <constraint firstItem="esR-4S-Ieh" firstAttribute="top" secondItem="pdC-LY-YLE" secondAttribute="bottom" constant="30" id="nZS-ki-CBX"/>
+                            <constraint firstItem="C0M-bU-c0M" firstAttribute="top" secondItem="esR-4S-Ieh" secondAttribute="bottom" constant="50" id="uKB-BA-51Q"/>
+                            <constraint firstItem="0a8-HT-p9b" firstAttribute="leading" secondItem="Bsi-1s-CaU" secondAttribute="leading" constant="30" id="uf1-aM-c06"/>
+                            <constraint firstItem="Bsi-1s-CaU" firstAttribute="trailing" secondItem="pdC-LY-YLE" secondAttribute="trailing" constant="30" id="vCN-ny-ISY"/>
+                            <constraint firstItem="C0M-bU-c0M" firstAttribute="leading" secondItem="Bsi-1s-CaU" secondAttribute="leading" constant="30" id="x4l-ve-E8C"/>
+                            <constraint firstAttribute="bottom" secondItem="Zmj-BM-hGI" secondAttribute="bottom" id="x4v-WL-37N"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeTextField1" destination="1JQ-Ip-1a8" id="OWA-aJ-JPD"/>
+                        <outlet property="codeTextField2" destination="ziz-ob-t6X" id="CBJ-fp-mc6"/>
+                        <outlet property="codeTextField3" destination="pB6-Sz-Dz5" id="xg4-fB-dQy"/>
+                        <outlet property="codeTextField4" destination="Iqw-dg-cRc" id="gG9-wd-aVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdK-hU-TIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4092" y="-95"/>
+            <point key="canvasLocation" x="4090.7692307692305" y="-95.260663507109001"/>
         </scene>
     </scenes>
     <resources>
         <image name="nextButton" width="120" height="107"/>
+        <image name="securityImage" width="310" height="233.66667175292969"/>
         <image name="shapedBackground-lower" width="375" height="412"/>
         <image name="shapedBackground-upper" width="375" height="517"/>
         <namedColor name="Blue - Dark">
