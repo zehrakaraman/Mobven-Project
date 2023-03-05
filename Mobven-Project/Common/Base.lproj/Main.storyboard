@@ -178,6 +178,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="1NL-Zi-iOM" eventType="touchUpInside" id="BRG-I3-m9z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wLV-NX-zOm"/>
