@@ -9,21 +9,33 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configureTextField()
+        
+        let tab = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tab)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureTextField() {
+        phoneNumberTextField.cornerRadius = 17.0
+        phoneNumberTextField.borderStyle = .none
     }
-    */
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "VerificationViewController")
+        navigationController?.pushViewController(viewController, animated: true)
+        navigationItem.backButtonTitle = ""
+    }
 }
