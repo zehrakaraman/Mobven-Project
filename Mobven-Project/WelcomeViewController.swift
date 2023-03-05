@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController {
         for button in buttons {
             let gradientLayer = CAGradientLayer.gradientLayer(in: button.bounds)
             button.layer.insertSublayer(gradientLayer, at: 0)
-            button.cornerRadius = 18.0
+            button.cornerRadius = 17.0
             button.layer.masksToBounds = true
         }
     }
