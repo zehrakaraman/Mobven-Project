@@ -22,12 +22,14 @@ class WelcomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController")
         navigationController?.pushViewController(viewController, animated: true)
+        navigationItem.backButtonTitle = ""
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         navigationController?.pushViewController(viewController, animated: true)
+        navigationItem.backButtonTitle = ""
     }
     
     func configureButtons(for buttons: [UIButton]) {
