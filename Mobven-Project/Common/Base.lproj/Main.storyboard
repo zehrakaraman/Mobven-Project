@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -124,10 +123,91 @@
                     <view key="view" contentMode="scaleToFill" id="Gix-B8-aT1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-lower" translatesAutoresizingMaskIntoConstraints="NO" id="Mk6-uK-ENS">
+                                <rect key="frame" x="-30" y="244" width="450" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="qIr-tl-qEn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-lF-PX8">
+                                <rect key="frame" x="30" y="147" width="330" height="35"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill your account information below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR9-Jv-LaL">
+                                <rect key="frame" x="30" y="195" width="330" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue - Light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-kr-nal">
+                                <rect key="frame" x="135" y="260" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g9j-kr-nal" secondAttribute="height" multiplier="1:1" id="7Jf-dm-09c"/>
+                                    <constraint firstAttribute="height" constant="120" id="cEX-Bb-iyP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="personalAccountImage"/>
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="1NL-Zi-iOM" eventType="touchUpInside" id="FTZ-37-3JS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-Sc-jBs">
+                                <rect key="frame" x="30" y="400" width="37" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-CK-fgU">
+                                <rect key="frame" x="30" y="422" width="330" height="50"/>
+                                <color key="backgroundColor" name="Purple - Soft"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0ai-kf-MOu"/>
+                                </constraints>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-8X-zoO">
+                                <rect key="frame" x="300" y="754" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Pv-8X-zoO" secondAttribute="height" multiplier="1:1" id="8ab-er-kDb"/>
+                                    <constraint firstAttribute="height" constant="60" id="xb8-PG-3r3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wLV-NX-zOm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="jR9-Jv-LaL" secondAttribute="trailing" constant="30" id="0O3-50-CGT"/>
+                            <constraint firstAttribute="bottom" secondItem="6Pv-8X-zoO" secondAttribute="bottom" constant="30" id="2tv-m2-vMY"/>
+                            <constraint firstItem="I0e-Sc-jBs" firstAttribute="top" secondItem="g9j-kr-nal" secondAttribute="bottom" constant="20" id="8p0-ud-xU4"/>
+                            <constraint firstItem="I0e-Sc-jBs" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="ACz-Ck-5eC"/>
+                            <constraint firstItem="Ka5-CK-fgU" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="Hf3-wn-ez3"/>
+                            <constraint firstItem="tv9-lF-PX8" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="Mmc-oS-oSI"/>
+                            <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="Ka5-CK-fgU" secondAttribute="trailing" constant="30" id="NPS-7p-TU9"/>
+                            <constraint firstItem="g9j-kr-nal" firstAttribute="top" secondItem="jR9-Jv-LaL" secondAttribute="bottom" constant="50" id="QA7-B8-gIW"/>
+                            <constraint firstItem="g9j-kr-nal" firstAttribute="centerX" secondItem="Gix-B8-aT1" secondAttribute="centerX" id="Qxn-8d-3e6"/>
+                            <constraint firstItem="jR9-Jv-LaL" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="a3r-al-mP6"/>
+                            <constraint firstItem="jR9-Jv-LaL" firstAttribute="top" secondItem="tv9-lF-PX8" secondAttribute="bottom" constant="13" id="fLO-rY-qGM"/>
+                            <constraint firstAttribute="trailing" secondItem="Mk6-uK-ENS" secondAttribute="trailing" constant="-30" id="iHt-WN-e7h"/>
+                            <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="6Pv-8X-zoO" secondAttribute="trailing" constant="30" id="mr4-Yl-vpo"/>
+                            <constraint firstItem="Mk6-uK-ENS" firstAttribute="leading" secondItem="Gix-B8-aT1" secondAttribute="leading" constant="-30" id="p9u-K5-D4c"/>
+                            <constraint firstItem="tv9-lF-PX8" firstAttribute="top" secondItem="wLV-NX-zOm" secondAttribute="top" constant="100" id="qFy-gn-mCz"/>
+                            <constraint firstAttribute="bottom" secondItem="Mk6-uK-ENS" secondAttribute="bottom" id="to3-bj-jx6"/>
+                            <constraint firstItem="Ka5-CK-fgU" firstAttribute="top" secondItem="I0e-Sc-jBs" secondAttribute="bottom" constant="7" id="ufn-ey-onX"/>
+                            <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="tv9-lF-PX8" secondAttribute="trailing" constant="30" id="zdz-lH-1dk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K21-ek-XH5"/>
+                    <connections>
+                        <outlet property="accountImageButton" destination="g9j-kr-nal" id="n1a-iz-vPj"/>
+                        <outlet property="nameTextField" destination="Ka5-CK-fgU" id="NPK-zo-Rar"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-aC-6pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,6 +413,7 @@ our Terms and Condition</string>
     </scenes>
     <resources>
         <image name="nextButton" width="120" height="107"/>
+        <image name="personalAccountImage" width="120" height="120"/>
         <image name="securityImage" width="310" height="233.66667175292969"/>
         <image name="shapedBackground-lower" width="375" height="412"/>
         <image name="shapedBackground-upper" width="375" height="517"/>
@@ -348,8 +429,5 @@ our Terms and Condition</string>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
