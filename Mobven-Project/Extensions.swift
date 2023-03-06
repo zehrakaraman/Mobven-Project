@@ -27,3 +27,20 @@ extension UIViewController: UITextFieldDelegate {
         }
     }
 }
+
+extension CAGradientLayer {
+    static func gradientLayer(in frame: CGRect) -> Self {
+        let layer = Self()
+        layer.colors = colors()
+        layer.frame = frame
+        return layer
+    }
+    
+    private static func colors() -> [CGColor] {
+        let beginColor = UIColor(named: "Gradient")
+        let endColor = UIColor(named: "Purple")
+        
+        return [beginColor!.cgColor, endColor!.cgColor]
+    }
+}
+
