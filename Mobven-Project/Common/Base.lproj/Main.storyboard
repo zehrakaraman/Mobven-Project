@@ -40,7 +40,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jNH-XN-29H">
                                 <rect key="frame" x="30" y="425.33333333333331" width="330" height="109.99999999999994"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-B6-l8l">
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yo-B6-l8l" customClass="GradientButton" customModule="MobvenDev" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ong-Cx-ODj"/>
@@ -50,10 +50,10 @@
                                             <color key="baseForegroundColor" name="Blue - Dark"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="registerButtonTapped:" destination="BTj-Te-4aE" eventType="touchUpInside" id="es2-3A-CsA"/>
+                                            <action selector="registerButtonTapped:" destination="BTj-Te-4aE" eventType="touchUpInside" id="JjU-A0-rR7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-mh-ffW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-mh-ffW" customClass="GradientButton" customModule="MobvenDev" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HSw-8X-RvX"/>
@@ -63,7 +63,7 @@
                                             <color key="baseForegroundColor" name="Blue - Dark"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="BTj-Te-4aE" eventType="touchUpInside" id="4vl-So-X71"/>
+                                            <action selector="loginButtonTapped:" destination="BTj-Te-4aE" eventType="touchUpInside" id="1Ip-C4-nif"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,10 +88,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GJt-wS-LKl"/>
-                    <connections>
-                        <outlet property="loginButton" destination="usE-mh-ffW" id="vnC-y3-yxv"/>
-                        <outlet property="registerButton" destination="9yo-B6-l8l" id="XKd-cA-01G"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0w-Qr-oHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +205,7 @@
                     <navigationItem key="navigationItem" id="K21-ek-XH5"/>
                     <connections>
                         <outlet property="accountImageButton" destination="g9j-kr-nal" id="n1a-iz-vPj"/>
-                        <outlet property="nameTextField" destination="Ka5-CK-fgU" id="NPK-zo-Rar"/>
+                        <outlet property="nameTextField" destination="Ka5-CK-fgU" id="P0h-eQ-Grc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-aC-6pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
