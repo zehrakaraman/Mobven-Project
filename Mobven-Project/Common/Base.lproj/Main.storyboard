@@ -191,12 +191,13 @@
                             <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="Ka5-CK-fgU" secondAttribute="trailing" constant="30" id="NPS-7p-TU9"/>
                             <constraint firstItem="g9j-kr-nal" firstAttribute="top" secondItem="jR9-Jv-LaL" secondAttribute="bottom" constant="50" id="QA7-B8-gIW"/>
                             <constraint firstItem="g9j-kr-nal" firstAttribute="centerX" secondItem="Gix-B8-aT1" secondAttribute="centerX" id="Qxn-8d-3e6"/>
+                            <constraint firstItem="tv9-lF-PX8" firstAttribute="top" secondItem="wLV-NX-zOm" secondAttribute="top" constant="100" id="Xae-7j-awG"/>
                             <constraint firstItem="jR9-Jv-LaL" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="a3r-al-mP6"/>
                             <constraint firstItem="jR9-Jv-LaL" firstAttribute="top" secondItem="tv9-lF-PX8" secondAttribute="bottom" constant="13" id="fLO-rY-qGM"/>
                             <constraint firstAttribute="trailing" secondItem="Mk6-uK-ENS" secondAttribute="trailing" constant="-30" id="iHt-WN-e7h"/>
+                            <constraint firstItem="wLV-NX-zOm" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ka5-CK-fgU" secondAttribute="bottom" constant="338" id="lre-nh-Gci"/>
                             <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="6Pv-8X-zoO" secondAttribute="trailing" constant="30" id="mr4-Yl-vpo"/>
                             <constraint firstItem="Mk6-uK-ENS" firstAttribute="leading" secondItem="Gix-B8-aT1" secondAttribute="leading" constant="-30" id="p9u-K5-D4c"/>
-                            <constraint firstItem="tv9-lF-PX8" firstAttribute="top" secondItem="wLV-NX-zOm" secondAttribute="top" constant="100" id="qFy-gn-mCz"/>
                             <constraint firstAttribute="bottom" secondItem="Mk6-uK-ENS" secondAttribute="bottom" id="to3-bj-jx6"/>
                             <constraint firstItem="Ka5-CK-fgU" firstAttribute="top" secondItem="I0e-Sc-jBs" secondAttribute="bottom" constant="7" id="ufn-ey-onX"/>
                             <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="tv9-lF-PX8" secondAttribute="trailing" constant="30" id="zdz-lH-1dk"/>
@@ -206,6 +207,7 @@
                     <connections>
                         <outlet property="accountImageButton" destination="g9j-kr-nal" id="n1a-iz-vPj"/>
                         <outlet property="nameTextField" destination="Ka5-CK-fgU" id="P0h-eQ-Grc"/>
+                        <outlet property="topConstraint" destination="Xae-7j-awG" id="pB2-DD-ISe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-aC-6pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
