@@ -19,7 +19,7 @@ extension UIView {
 }
 
 extension UIViewController: UITextFieldDelegate {
-    func designTextFields(textFields: [UITextField]) {
+    func configureTextField(_ textFields: [UITextField]) {
         textFields.forEach {
             $0.delegate = self
             $0.cornerRadius = 17.0

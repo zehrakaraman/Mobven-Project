@@ -17,10 +17,10 @@ class VerificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        designTextFields(textFields: [codeTextField1,
-                                      codeTextField2,
-                                      codeTextField3,
-                                      codeTextField4])
+        configureTextField([codeTextField1,
+                            codeTextField2,
+                            codeTextField3,
+                            codeTextField4])
         
         codeTextField1.addTarget(self, action: #selector(switchBasedNextTextField), for: .editingChanged)
         codeTextField2.addTarget(self, action: #selector(switchBasedNextTextField), for: .editingChanged)

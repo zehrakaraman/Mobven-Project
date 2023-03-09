@@ -195,7 +195,7 @@
                             <constraint firstItem="jR9-Jv-LaL" firstAttribute="leading" secondItem="wLV-NX-zOm" secondAttribute="leading" constant="30" id="a3r-al-mP6"/>
                             <constraint firstItem="jR9-Jv-LaL" firstAttribute="top" secondItem="tv9-lF-PX8" secondAttribute="bottom" constant="13" id="fLO-rY-qGM"/>
                             <constraint firstAttribute="trailing" secondItem="Mk6-uK-ENS" secondAttribute="trailing" constant="-30" id="iHt-WN-e7h"/>
-                            <constraint firstItem="wLV-NX-zOm" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ka5-CK-fgU" secondAttribute="bottom" constant="338" id="lre-nh-Gci"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ka5-CK-fgU" secondAttribute="bottom" constant="372" id="lre-nh-Gci"/>
                             <constraint firstItem="wLV-NX-zOm" firstAttribute="trailing" secondItem="6Pv-8X-zoO" secondAttribute="trailing" constant="30" id="mr4-Yl-vpo"/>
                             <constraint firstItem="Mk6-uK-ENS" firstAttribute="leading" secondItem="Gix-B8-aT1" secondAttribute="leading" constant="-30" id="p9u-K5-D4c"/>
                             <constraint firstAttribute="bottom" secondItem="Mk6-uK-ENS" secondAttribute="bottom" id="to3-bj-jx6"/>
@@ -207,6 +207,7 @@
                     <connections>
                         <outlet property="accountImageButton" destination="g9j-kr-nal" id="n1a-iz-vPj"/>
                         <outlet property="nameTextField" destination="Ka5-CK-fgU" id="P0h-eQ-Grc"/>
+                        <outlet property="nextButton" destination="6Pv-8X-zoO" id="oFj-x0-DOS"/>
                         <outlet property="topConstraint" destination="Xae-7j-awG" id="pB2-DD-ISe"/>
                     </connections>
                 </viewController>
