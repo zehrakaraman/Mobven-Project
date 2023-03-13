@@ -80,8 +80,7 @@ class LoginViewController: UIViewController {
     
     @objc func nextPage(_ textField: UITextField) {
         if textField.text?.count == 11 {
-            dismissKeyboard()
-            nextButtonTapped(nextButton)
+            self.phoneNumberTextField.resignFirstResponder()
         }
     }
 
