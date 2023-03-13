@@ -10,60 +10,90 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var termsLabel: UILabel!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var nextButton: UIButton!
-    
-    var isShowingKeybord = false
+    var constraint: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         configureTextField([phoneNumberTextField])
+        configureLabel()
+        phoneNumberTextField.addTarget(self, action: #selector(nextPage), for: .editingChanged)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        let tab = UITapGestureRecognizer(
+        let tap = UITapGestureRecognizer(
             target: self,
             action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tab)
+        view.addGestureRecognizer(tap)
+        
+//        let termsTap = UITapGestureRecognizer(
+//            target: self,
+//            action: #selector(tappedOnLabel))
+//        termsTap.numberOfTapsRequired = 1
+//        view.addGestureRecognizer(termsTap)
+    }
+    
+    func configureLabel() {
+        if let fullText = termsLabel.text {
+            self.termsLabel.changeColorText(fullText: fullText, changeText: "Terms and Condition")
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            // if keyboard size is not available for some reason, ddont do anything
-            return
-        }
-                
-        var shouldMoveViewUp = false
-                
-        let bottomOfTextField = phoneNumberTextField.convert(phoneNumberTextField.bounds, to: self.view).maxY
-        let topOfKeyboard = self.view.frame.height - keyboardSize.height
-                
-        if bottomOfTextField > topOfKeyboard {
-            shouldMoveViewUp = true
-        }
-                
-        if shouldMoveViewUp {
-            // move to root view up by the distance of keyboard height
-            self.view.frame.origin.y = 0 - keyboardSize.height
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if termsLabel.frame.origin.y != keyboardSize.height {
+                constraint = termsLabel.frame.origin.y - keyboardSize.origin.y
+                UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                    self.topConstraint.constant -= (self.constraint + self.termsLabel.frame.height + 10)
+                    self.view.layoutIfNeeded()
+                })
+            }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        // move back to root view origin to zero
-        dismissKeyboard()
-        self.view.frame.origin.y = 0
+        if let _ = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.topConstraint.constant += (self.constraint + self.termsLabel.frame.height + 10)
+                self.view.layoutIfNeeded()
+                self.dismissKeyboard()
+            })
+        }
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    @objc func tappedOnLabel(_ gesture: UITapGestureRecognizer) {
+        guard let text = self.termsLabel.text else { return }
+        let termsAndConditionRange = (text as NSString).range(of: "Terms and Condition")
+        if gesture.didTapAttributedTextInLabel(label: termsLabel, inRange: termsAndConditionRange) {
+            print("Tapped terms and condition")
+        }
+    }
+    
+    @objc func nextPage(_ textField: UITextField) {
+        if textField.text?.count == 11 {
+            dismissKeyboard()
+            nextButtonTapped(nextButton)
+        }
+    }
 
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "VerificationViewController")
-        navigationController?.pushViewController(viewController, animated: true)
-        navigationItem.backButtonTitle = ""
+        if phoneNumberTextField.text?.count == 11 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "VerificationViewController")
+            navigationController?.pushViewController(viewController, animated: true)
+            navigationItem.backButtonTitle = ""
+        } else {
+            print("Missing content")
+        }
+        
     }
 }
