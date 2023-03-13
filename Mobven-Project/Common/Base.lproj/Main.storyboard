@@ -127,19 +127,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-lF-PX8">
-                                <rect key="frame" x="30" y="147" width="330" height="35"/>
+                                <rect key="frame" x="30" y="147" width="330" height="37"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
                                 <color key="textColor" name="Blue - Dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill your account information below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR9-Jv-LaL">
-                                <rect key="frame" x="30" y="195" width="330" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fill your account information below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR9-Jv-LaL">
+                                <rect key="frame" x="30" y="197" width="330" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <color key="textColor" name="Blue - Light"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9j-kr-nal">
-                                <rect key="frame" x="135" y="260" width="120" height="120"/>
+                                <rect key="frame" x="135" y="261" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g9j-kr-nal" secondAttribute="height" multiplier="1:1" id="7Jf-dm-09c"/>
                                     <constraint firstAttribute="height" constant="120" id="cEX-Bb-iyP"/>
@@ -150,8 +150,8 @@
                                     <action selector="imageButtonTapped:" destination="1NL-Zi-iOM" eventType="touchUpInside" id="FTZ-37-3JS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-Sc-jBs">
-                                <rect key="frame" x="30" y="400" width="37" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-Sc-jBs">
+                                <rect key="frame" x="30" y="401" width="37" height="14"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <color key="textColor" name="Blue - Dark"/>
                                 <nil key="highlightedColor"/>
@@ -208,7 +208,7 @@
                         <outlet property="accountImageButton" destination="g9j-kr-nal" id="n1a-iz-vPj"/>
                         <outlet property="nameTextField" destination="Ka5-CK-fgU" id="P0h-eQ-Grc"/>
                         <outlet property="nextButton" destination="6Pv-8X-zoO" id="oFj-x0-DOS"/>
-                        <outlet property="topConstraint" destination="Xae-7j-awG" id="pB2-DD-ISe"/>
+                        <outlet property="topConstraint" destination="Xae-7j-awG" id="aWb-Pc-ewl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-aC-6pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,7 +243,7 @@ your phone number</string>
                                 <color key="textColor" name="Blue - Dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-hO-hPo">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 0555 555 5555" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-hO-hPo">
                                 <rect key="frame" x="30" y="356.33333333333331" width="330" height="50"/>
                                 <color key="backgroundColor" name="Purple - Soft"/>
                                 <constraints>
@@ -295,8 +295,10 @@ our Terms and Condition</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="CAD-yh-Sld" id="CrN-um-bs7"/>
+                        <outlet property="nextButton" destination="CAD-yh-Sld" id="wPF-4o-U4d"/>
                         <outlet property="phoneNumberTextField" destination="FYe-hO-hPo" id="h6m-VB-82A"/>
+                        <outlet property="termsLabel" destination="Wv1-4f-ukQ" id="GpS-bN-esL"/>
+                        <outlet property="topConstraint" destination="own-Da-Yzb" id="OnF-k1-3o9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpI-79-Yr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
