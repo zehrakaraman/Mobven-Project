@@ -84,6 +84,5 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        print("Dashboard view")
     }
 }
