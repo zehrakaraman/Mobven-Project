@@ -404,10 +404,12 @@ our Terms and Condition</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="codeTextField1" destination="1JQ-Ip-1a8" id="OWA-aJ-JPD"/>
+                        <outlet property="codeTextField1" destination="1JQ-Ip-1a8" id="uSR-GI-lvG"/>
                         <outlet property="codeTextField2" destination="ziz-ob-t6X" id="CBJ-fp-mc6"/>
                         <outlet property="codeTextField3" destination="pB6-Sz-Dz5" id="xg4-fB-dQy"/>
                         <outlet property="codeTextField4" destination="Iqw-dg-cRc" id="gG9-wd-aVD"/>
+                        <outlet property="textFields" destination="0a8-HT-p9b" id="GiH-Br-0uz"/>
+                        <outlet property="topConstraint" destination="nZS-ki-CBX" id="tIT-ci-tG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdK-hU-TIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,10 +9,15 @@ import UIKit
 
 class VerificationViewController: UIViewController {
 
+    @IBOutlet weak var textFields: UIStackView!
     @IBOutlet weak var codeTextField1: UITextField!
     @IBOutlet weak var codeTextField2: UITextField!
     @IBOutlet weak var codeTextField3: UITextField!
     @IBOutlet weak var codeTextField4: UITextField!
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
+    var constraint: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +32,36 @@ class VerificationViewController: UIViewController {
         codeTextField3.addTarget(self, action: #selector(switchBasedNextTextField), for: .editingChanged)
         codeTextField4.addTarget(self, action: #selector(switchBasedNextTextField), for: .editingChanged)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         let tap = UITapGestureRecognizer(
             target: self,
             action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if textFields.frame.origin.y != keyboardSize.height {
+                constraint = textFields.frame.origin.y - keyboardSize.origin.y
+                UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                    self.topConstraint.constant -= (self.constraint + self.textFields.frame.height + 10)
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let _ = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                self.topConstraint.constant += (self.constraint + self.textFields.frame.height + 10)
+                self.view.layoutIfNeeded()
+                self.dismissKeyboard()
+            })
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -53,6 +84,5 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        
     }
 }
