@@ -17,10 +17,4 @@ class ChatListTableViewCell: UITableViewCell {
         super.awakeFromNib()
     
     }
-    
-    func configure() {
-        userImage.image = nil
-        userTitle.text = "Title"
-        userName.text = "Username"
-    }
 }
