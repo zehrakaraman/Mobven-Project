@@ -84,5 +84,9 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        navigationController?.pushViewController(destinationVC, animated: true)
+        navigationItem.backButtonTitle = ""
     }
 }

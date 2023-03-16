@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA28458829C33E33005E3F9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28458729C33E33005E3F9B /* HomeViewController.swift */; };
+		FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459229C341D7005E3F9B /* Endpoint.swift */; };
+		FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459429C34250005E3F9B /* RequestMethod.swift */; };
+		FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */; };
+		FA28459929C34C54005E3F9B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459829C34C54005E3F9B /* HTTPClient.swift */; };
+		FA28459B29C34CF2005E3F9B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459A29C34CF2005E3F9B /* RequestError.swift */; };
+		FA28459F29C354F3005E3F9B /* GetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459E29C354F3005E3F9B /* GetResponse.swift */; };
 		FA2B7AE029B3E028008D3036 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FADC2E4E29B3911C00485933 /* Montserrat-Regular.ttf */; };
+		FA34284529C2593C00F4FE39 /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA34284329C2593C00F4FE39 /* ChatListTableViewCell.swift */; };
+		FA34284629C2593C00F4FE39 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA34284429C2593C00F4FE39 /* ChatListTableViewCell.xib */; };
 		FA8EA19E29B4BAC30074E79D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EA19D29B4BAC30074E79D /* VerificationViewController.swift */; };
 		FA90B40B29B61AE800EC0D39 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90B40A29B61AE800EC0D39 /* GradientButton.swift */; };
 		FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14429B35B7400E6B193 /* AppDelegate.swift */; };
@@ -44,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA28458729C33E33005E3F9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA28459229C341D7005E3F9B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FA28459429C34250005E3F9B /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsEndpoint.swift; sourceTree = "<group>"; };
+		FA28459829C34C54005E3F9B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FA28459A29C34CF2005E3F9B /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		FA28459E29C354F3005E3F9B /* GetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResponse.swift; sourceTree = "<group>"; };
+		FA34284329C2593C00F4FE39 /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		FA34284429C2593C00F4FE39 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
 		FA8EA19D29B4BAC30074E79D /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		FA90B40A29B61AE800EC0D39 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		FACFF14129B35B7400E6B193 /* MobvenDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,12 +131,108 @@
 		FA15B8BC29B51C280010F3A3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FADC2E6029B39A8000485933 /* WelcomeViewController.swift */,
-				FAD3B40529B3BBAF00EB97C8 /* RegisterViewController.swift */,
-				FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */,
-				FA8EA19D29B4BAC30074E79D /* VerificationViewController.swift */,
+				FA28458929C340AB005E3F9B /* WelcomeView */,
+				FA28458A29C340B6005E3F9B /* RegisterView */,
+				FA28458B29C340CE005E3F9B /* LoginView */,
+				FA28458C29C340DE005E3F9B /* VerificationView */,
+				FA28458629C33E0D005E3F9B /* HomeView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FA28458629C33E0D005E3F9B /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FA34284229C257C300F4FE39 /* Cell */,
+				FA28458729C33E33005E3F9B /* HomeViewController.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FA28458929C340AB005E3F9B /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FADC2E6029B39A8000485933 /* WelcomeViewController.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		FA28458A29C340B6005E3F9B /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3B40529B3BBAF00EB97C8 /* RegisterViewController.swift */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		FA28458B29C340CE005E3F9B /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		FA28458C29C340DE005E3F9B /* VerificationView */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EA19D29B4BAC30074E79D /* VerificationViewController.swift */,
+			);
+			path = VerificationView;
+			sourceTree = "<group>";
+		};
+		FA28458D29C34108005E3F9B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FA28458E29C34132005E3F9B /* API */,
+				FA28458F29C3413F005E3F9B /* RequestModel */,
+				FA28459029C3415D005E3F9B /* ResponseModel */,
+				FA28459129C34175005E3F9B /* Endpoint */,
+				FA28459429C34250005E3F9B /* RequestMethod.swift */,
+				FA28459A29C34CF2005E3F9B /* RequestError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FA28458E29C34132005E3F9B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA28459829C34C54005E3F9B /* HTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA28458F29C3413F005E3F9B /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		FA28459029C3415D005E3F9B /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA28459E29C354F3005E3F9B /* GetResponse.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		FA28459129C34175005E3F9B /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				FA28459229C341D7005E3F9B /* Endpoint.swift */,
+				FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		FA34284229C257C300F4FE39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA34284329C2593C00F4FE39 /* ChatListTableViewCell.swift */,
+				FA34284429C2593C00F4FE39 /* ChatListTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FACFF13829B35B7400E6B193 = {
@@ -146,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				FADC2E4A29B3887100485933 /* Common */,
+				FA28458D29C34108005E3F9B /* Networking */,
 				FA15B8BC29B51C280010F3A3 /* Views */,
 				FAD3B40829B3BF0E00EB97C8 /* Extensions.swift */,
 				FA90B40A29B61AE800EC0D39 /* GradientButton.swift */,
@@ -324,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2B7AE029B3E028008D3036 /* Montserrat-Regular.ttf in Resources */,
+				FA34284629C2593C00F4FE39 /* ChatListTableViewCell.xib in Resources */,
 				FAD3B40729B3BD8F00EB97C8 /* Montserrat-Bold.ttf in Resources */,
 				FACFF15129B35B7600E6B193 /* LaunchScreen.storyboard in Resources */,
 				FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */,
@@ -355,11 +471,19 @@
 			files = (
 				FAD3B40B29B3C07200EB97C8 /* LoginViewController.swift in Sources */,
 				FA90B40B29B61AE800EC0D39 /* GradientButton.swift in Sources */,
+				FA34284529C2593C00F4FE39 /* ChatListTableViewCell.swift in Sources */,
 				FADC2E6129B39A8000485933 /* WelcomeViewController.swift in Sources */,
+				FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */,
 				FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */,
+				FA28458829C33E33005E3F9B /* HomeViewController.swift in Sources */,
 				FAD3B40929B3BF0E00EB97C8 /* Extensions.swift in Sources */,
+				FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */,
 				FACFF14729B35B7400E6B193 /* SceneDelegate.swift in Sources */,
+				FA28459929C34C54005E3F9B /* HTTPClient.swift in Sources */,
+				FA28459F29C354F3005E3F9B /* GetResponse.swift in Sources */,
+				FA28459B29C34CF2005E3F9B /* RequestError.swift in Sources */,
 				FA8EA19E29B4BAC30074E79D /* VerificationViewController.swift in Sources */,
+				FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */,
 				FAD3B40629B3BBAF00EB97C8 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
