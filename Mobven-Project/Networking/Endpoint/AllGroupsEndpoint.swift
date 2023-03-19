@@ -41,7 +41,7 @@ extension AllGroupsEndpoint: Endpoint {
         
         switch self {
         case .getAllGroups:
-            return ["Authorization": "Bearer " + "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmF0aW9uIjoxNjg3ODY2NTIzLjY4NDM4Nywic3ViamVjdCI6ImNvbW11bmUtYmUiLCJkZXZpY2VJRCI6IkNBNEVERTk2LTFDNzEtNEYxQy1CNkYwLUZDOEQ4RjNEMkY1NiJ9.PVNzwoZHOjHYFhZ2merA8Zl-bv11Fc3xeRdVf4GZiZYpU847Swbn90wFP2x6z5JB-if567bgA6nr8wJ6cyKrhw"]
+            return ["Authorization": "Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWJqZWN0IjoiY29tbXVuZS1iZSIsImRldmljZUlEIjoiQ0E0RURFOTYtMUM3MS00RjFDLUI2RjAtRkM4RDhGM0QyRjU2IiwiZXhwaXJhdGlvbiI6MTY4NzkwMTU3OC45NTEzMzl9.FDuMG-LNjfgrkE45ZgMuhLnxyh6M5mI40WtJ8vrBGO48AlG4jBfk6pnyCTSjhZ34G3y8Qs4d2s1N8t6K_uWChA"]
         }
     }
 }
