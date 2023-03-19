@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="D3m-6j-bBI">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="nxe-uw-h5I" customClass="HomeViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-je-gA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedChatBackground" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-23-Xhh">
+                                <rect key="frame" x="0.0" y="398" width="414" height="498"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GLU-gY-97H">
+                                <rect key="frame" x="0.0" y="428" width="414" height="434"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
+                        <color key="backgroundColor" name="Purple - Soft"/>
+                        <constraints>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="w4Z-23-Xhh" secondAttribute="trailing" id="4V3-BE-vlS"/>
+                            <constraint firstItem="GLU-gY-97H" firstAttribute="bottom" secondItem="acR-sl-ate" secondAttribute="bottom" id="4aM-nP-fJN"/>
+                            <constraint firstItem="GLU-gY-97H" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="DlV-bm-J2S"/>
+                            <constraint firstItem="GLU-gY-97H" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="380" id="Jcc-G8-dbY"/>
+                            <constraint firstAttribute="bottom" secondItem="w4Z-23-Xhh" secondAttribute="bottom" id="Jow-4Z-K3R"/>
+                            <constraint firstItem="w4Z-23-Xhh" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="350" id="Jsw-o4-pxR"/>
+                            <constraint firstItem="w4Z-23-Xhh" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="WE9-Ie-o7u"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="GLU-gY-97H" secondAttribute="trailing" id="ydJ-t2-vJI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatList" destination="GLU-gY-97H" id="W4a-x5-xeg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shapedChatBackground" width="375" height="447"/>
+        <namedColor name="Purple - Soft">
+            <color red="0.96078431372549022" green="0.95686274509803926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

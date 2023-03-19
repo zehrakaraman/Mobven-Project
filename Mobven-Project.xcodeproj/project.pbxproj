@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA28458829C33E33005E3F9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28458729C33E33005E3F9B /* HomeViewController.swift */; };
 		FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459229C341D7005E3F9B /* Endpoint.swift */; };
 		FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459429C34250005E3F9B /* RequestMethod.swift */; };
 		FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */; };
@@ -33,6 +32,14 @@
 		FAD3B40B29B3C07200EB97C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3B40A29B3C07200EB97C8 /* LoginViewController.swift */; };
 		FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADC2E5E29B393F200485933 /* Colors.xcassets */; };
 		FADC2E6129B39A8000485933 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC2E6029B39A8000485933 /* WelcomeViewController.swift */; };
+		FAE56B7D29C59BD200479D09 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE56B7629C59BD200479D09 /* Home.storyboard */; };
+		FAE56B7E29C59BD200479D09 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7729C59BD200479D09 /* HomeViewController.swift */; };
+		FAE56B7F29C59BD200479D09 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7829C59BD200479D09 /* HomePresenter.swift */; };
+		FAE56B8029C59BD200479D09 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7929C59BD200479D09 /* HomeInteractor.swift */; };
+		FAE56B8129C59BD200479D09 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7A29C59BD200479D09 /* HomeModels.swift */; };
+		FAE56B8229C59BD200479D09 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7B29C59BD200479D09 /* HomeWorker.swift */; };
+		FAE56B8329C59BD200479D09 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B7C29C59BD200479D09 /* HomeRouter.swift */; };
+		FAE56B8529C5AEE300479D09 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE56B8429C5AEE300479D09 /* GetRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA28458729C33E33005E3F9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA28459229C341D7005E3F9B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FA28459429C34250005E3F9B /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsEndpoint.swift; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 		FADC2E5D29B3911D00485933 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		FADC2E5E29B393F200485933 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		FADC2E6029B39A8000485933 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FAE56B7629C59BD200479D09 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FAE56B7729C59BD200479D09 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAE56B7829C59BD200479D09 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FAE56B7929C59BD200479D09 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FAE56B7A29C59BD200479D09 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		FAE56B7B29C59BD200479D09 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		FAE56B7C29C59BD200479D09 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FAE56B8429C5AEE300479D09 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +158,13 @@
 			isa = PBXGroup;
 			children = (
 				FA34284229C257C300F4FE39 /* Cell */,
-				FA28458729C33E33005E3F9B /* HomeViewController.swift */,
+				FAE56B7629C59BD200479D09 /* Home.storyboard */,
+				FAE56B7729C59BD200479D09 /* HomeViewController.swift */,
+				FAE56B7829C59BD200479D09 /* HomePresenter.swift */,
+				FAE56B7929C59BD200479D09 /* HomeInteractor.swift */,
+				FAE56B7A29C59BD200479D09 /* HomeModels.swift */,
+				FAE56B7B29C59BD200479D09 /* HomeWorker.swift */,
+				FAE56B7C29C59BD200479D09 /* HomeRouter.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -205,6 +225,7 @@
 		FA28458F29C3413F005E3F9B /* RequestModel */ = {
 			isa = PBXGroup;
 			children = (
+				FAE56B8429C5AEE300479D09 /* GetRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -445,6 +466,7 @@
 				FADC2E5F29B393F200485933 /* Colors.xcassets in Resources */,
 				FACFF14E29B35B7600E6B193 /* Assets.xcassets in Resources */,
 				FACFF14C29B35B7400E6B193 /* Main.storyboard in Resources */,
+				FAE56B7D29C59BD200479D09 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,15 +497,21 @@
 				FADC2E6129B39A8000485933 /* WelcomeViewController.swift in Sources */,
 				FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */,
 				FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */,
-				FA28458829C33E33005E3F9B /* HomeViewController.swift in Sources */,
 				FAD3B40929B3BF0E00EB97C8 /* Extensions.swift in Sources */,
 				FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */,
+				FAE56B8529C5AEE300479D09 /* GetRequest.swift in Sources */,
 				FACFF14729B35B7400E6B193 /* SceneDelegate.swift in Sources */,
 				FA28459929C34C54005E3F9B /* HTTPClient.swift in Sources */,
+				FAE56B8129C59BD200479D09 /* HomeModels.swift in Sources */,
 				FA28459F29C354F3005E3F9B /* GetResponse.swift in Sources */,
+				FAE56B7F29C59BD200479D09 /* HomePresenter.swift in Sources */,
+				FAE56B7E29C59BD200479D09 /* HomeViewController.swift in Sources */,
 				FA28459B29C34CF2005E3F9B /* RequestError.swift in Sources */,
 				FA8EA19E29B4BAC30074E79D /* VerificationViewController.swift in Sources */,
+				FAE56B8329C59BD200479D09 /* HomeRouter.swift in Sources */,
+				FAE56B8029C59BD200479D09 /* HomeInteractor.swift in Sources */,
 				FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */,
+				FAE56B8229C59BD200479D09 /* HomeWorker.swift in Sources */,
 				FAD3B40629B3BBAF00EB97C8 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

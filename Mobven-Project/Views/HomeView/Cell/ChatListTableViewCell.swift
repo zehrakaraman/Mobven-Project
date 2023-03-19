@@ -11,10 +11,16 @@ class ChatListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userTitle: UILabel!
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     
+    }
+    
+    func configure(user: Home.Case.ViewModel.GroupsModel) {
+        userImage.image = nil
+        userTitle.text = user.name
+        userDescription.text = user.lastMessage?.message
     }
 }
