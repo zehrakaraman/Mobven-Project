@@ -19,8 +19,34 @@ class ChatListTableViewCell: UITableViewCell {
     }
     
     func configure(user: Home.Case.ViewModel.GroupsModel) {
-        userImage.image = nil
         userTitle.text = user.name
         userDescription.text = user.lastMessage?.message
+        userImage.image = UIImage(systemName: "person.crop.circle")
+        
+//        DispatchQueue.main.async {
+//            self.userImage.displayImage(with: user.groupPhoto)
+//        }
+    }
+}
+
+extension UIImageView {
+    func displayImage(with path: String?) {
+        if let path = path {
+            let url = URL(string: "http//\(path)")
+            let request = URLRequest(url: url!)
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        self.image = UIImage(data: data)
+                    }
+                } else {
+                    print("Null photo")
+                }
+            }
+            .resume()
+        } else {
+            print("Null photo")
+        }
     }
 }
