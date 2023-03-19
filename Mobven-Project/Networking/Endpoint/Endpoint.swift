@@ -10,6 +10,7 @@ import Foundation
 public protocol Endpoint {
     var scheme: String { get }
     var host: String { get }
+    var port: Int { get }
     var method: RequestMethod { get }
     var path: String { get }
     var queryItems: [URLQueryItem]? { get }
@@ -19,10 +20,14 @@ public protocol Endpoint {
 
 extension Endpoint {
     public var scheme: String {
-        return "https"
+        return "http"
     }
     
     public var host: String {
-        return "momentumv2.mobven.com:7076"
+        return "momentumv2.mobven.com"
+    }
+    
+    public var port: Int {
+        return 7076
     }
 }

@@ -38,11 +38,10 @@ extension AllGroupsEndpoint: Endpoint {
     }
     
     public var header: [String : String]? {
+        
         switch self {
         case .getAllGroups:
-            return ["Authorization": "Bearer" + "\(Bundle.main.infoDictionary?["Token"] as? String)"]
+            return ["Authorization": "Bearer " + "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmF0aW9uIjoxNjg3ODY2NTIzLjY4NDM4Nywic3ViamVjdCI6ImNvbW11bmUtYmUiLCJkZXZpY2VJRCI6IkNBNEVERTk2LTFDNzEtNEYxQy1CNkYwLUZDOEQ4RjNEMkY1NiJ9.PVNzwoZHOjHYFhZ2merA8Zl-bv11Fc3xeRdVf4GZiZYpU847Swbn90wFP2x6z5JB-if567bgA6nr8wJ6cyKrhw"]
         }
     }
-    
-    
 }

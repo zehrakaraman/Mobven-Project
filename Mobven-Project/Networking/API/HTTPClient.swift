@@ -14,7 +14,6 @@ public protocol HTTPClient {
 public extension HTTPClient {
     func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type, completion: @escaping ((Result<T, RequestError>) -> Void)) {
         let urlComponents = prepareURLComponents(with: endpoint)
-        
         guard let url = urlComponents.url else {
             return completion(.failure(.invalidURL))
         }
@@ -26,17 +25,16 @@ public extension HTTPClient {
         if let body = endpoint.body {
             request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         }
-        
+
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             do {
-                guard let response = response as? HTTPURLResponse, let data = data else {
-                    return completion(.failure(.decode))
+                guard let response = response as? HTTPURLResponse else {
+                    return completion(.failure(.noResponse))
                 }
                 
                 switch response.statusCode {
                 case 200...209:
-                    let decodedResponse = try JSONDecoder().decode(responseModel, from: data)
-                    print(decodedResponse)
+                    let decodedResponse = try JSONDecoder().decode(responseModel, from: data!)
                     return completion(.success(decodedResponse))
                 case 401:
                     return completion(.failure(.unauthorized))
@@ -44,15 +42,18 @@ public extension HTTPClient {
                     return completion(.failure(.unknown))
                 }
             } catch {
-                
+                return completion(.failure(.decode))
             }
         }
+        .resume()
     }
     
     func prepareURLComponents(with endpoint: Endpoint) -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
         urlComponents.host = endpoint.host
+        urlComponents.port = endpoint.port
+        urlComponents.path = endpoint.path
         
         if let queryItems = endpoint.queryItems {
             urlComponents.queryItems = queryItems
