@@ -37,6 +37,7 @@ class RegisterViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationView = storyboard.instantiateViewController(withIdentifier: "VerificationViewController")
         navigationController?.pushViewController(destinationView, animated: true)
+        navigationItem.backButtonTitle = ""
     }
 }
 

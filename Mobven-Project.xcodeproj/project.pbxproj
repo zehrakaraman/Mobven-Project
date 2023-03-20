@@ -161,8 +161,8 @@
 			children = (
 				FA28458929C340AB005E3F9B /* WelcomeView */,
 				FA28458A29C340B6005E3F9B /* RegisterView */,
-				FA28458B29C340CE005E3F9B /* LoginView */,
 				FA28458C29C340DE005E3F9B /* VerificationView */,
+				FA28458B29C340CE005E3F9B /* LoginView */,
 				FA28458629C33E0D005E3F9B /* HomeView */,
 			);
 			path = Views;
