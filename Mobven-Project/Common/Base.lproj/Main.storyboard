@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -216,96 +215,6 @@
             </objects>
             <point key="canvasLocation" x="2252" y="-95"/>
         </scene>
-        <!--Loginn View Controller-->
-        <scene sceneID="GJW-64-OgT">
-            <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Cf1-M6-SZI" customClass="LoginnViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e0p-21-Fjt">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-lower" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-L5-HZg">
-                                <rect key="frame" x="-30" y="244" width="450" height="600"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="StW-14-Cap"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-Dv-uP5">
-                                <rect key="frame" x="30" y="147" width="330" height="68.333333333333314"/>
-                                <string key="text">Continue with 
-your phone number</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
-                                <color key="textColor" name="Blue - Dark"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH2-h1-HMj">
-                                <rect key="frame" x="30.000000000000007" y="335.33333333333331" width="93.666666666666686" height="14"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                <color key="textColor" name="Blue - Dark"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 0555 555 5555" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-hO-hPo">
-                                <rect key="frame" x="30" y="356.33333333333331" width="330" height="50"/>
-                                <color key="backgroundColor" name="Purple - Soft"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xbA-qG-CxA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv1-4f-ukQ">
-                                <rect key="frame" x="30" y="426.33333333333331" width="330" height="24.666666666666686"/>
-                                <string key="text">By click continue you are agree with
-our Terms and Condition</string>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                <color key="textColor" name="Blue - Light"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAD-yh-Sld">
-                                <rect key="frame" x="300" y="754" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="P6A-Pz-BnR"/>
-                                    <constraint firstAttribute="width" secondItem="CAD-yh-Sld" secondAttribute="height" multiplier="1:1" id="zF1-zQ-M3G"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="Cf1-M6-SZI" eventType="touchUpInside" id="ggS-l1-Mix"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="7Ow-ne-2FG"/>
-                        <color key="backgroundColor" name="White"/>
-                        <constraints>
-                            <constraint firstItem="Tnb-Dv-uP5" firstAttribute="leading" secondItem="7Ow-ne-2FG" secondAttribute="leading" constant="30" id="8Ue-Yv-y2z"/>
-                            <constraint firstItem="7Ow-ne-2FG" firstAttribute="trailing" secondItem="Wv1-4f-ukQ" secondAttribute="trailing" constant="30" id="Ebt-BC-FnZ"/>
-                            <constraint firstAttribute="trailing" secondItem="CAD-yh-Sld" secondAttribute="trailing" constant="30" id="Fgn-yk-vzK"/>
-                            <constraint firstItem="CY1-L5-HZg" firstAttribute="leading" secondItem="7Ow-ne-2FG" secondAttribute="leading" constant="-30" id="LSR-wk-o2P"/>
-                            <constraint firstItem="FYe-hO-hPo" firstAttribute="top" secondItem="AH2-h1-HMj" secondAttribute="bottom" constant="7" id="QKp-DB-y1T"/>
-                            <constraint firstItem="Wv1-4f-ukQ" firstAttribute="top" secondItem="FYe-hO-hPo" secondAttribute="bottom" constant="20" id="W4P-5P-4op"/>
-                            <constraint firstItem="7Ow-ne-2FG" firstAttribute="trailing" secondItem="FYe-hO-hPo" secondAttribute="trailing" constant="30" id="aGc-Vp-9XL"/>
-                            <constraint firstItem="AH2-h1-HMj" firstAttribute="top" secondItem="Tnb-Dv-uP5" secondAttribute="bottom" constant="120" id="bWV-lI-4bF"/>
-                            <constraint firstAttribute="bottom" secondItem="CY1-L5-HZg" secondAttribute="bottom" id="d0n-oc-cg2"/>
-                            <constraint firstItem="Wv1-4f-ukQ" firstAttribute="leading" secondItem="7Ow-ne-2FG" secondAttribute="leading" constant="30" id="dky-TD-fWL"/>
-                            <constraint firstItem="FYe-hO-hPo" firstAttribute="leading" secondItem="7Ow-ne-2FG" secondAttribute="leading" constant="30" id="fhg-GO-BDl"/>
-                            <constraint firstItem="7Ow-ne-2FG" firstAttribute="trailing" secondItem="Tnb-Dv-uP5" secondAttribute="trailing" constant="30" id="itf-yU-UN1"/>
-                            <constraint firstAttribute="bottom" secondItem="CAD-yh-Sld" secondAttribute="bottom" constant="30" id="oUg-pY-EbB"/>
-                            <constraint firstItem="Tnb-Dv-uP5" firstAttribute="top" secondItem="7Ow-ne-2FG" secondAttribute="top" constant="100" id="own-Da-Yzb"/>
-                            <constraint firstItem="AH2-h1-HMj" firstAttribute="leading" secondItem="7Ow-ne-2FG" secondAttribute="leading" constant="30" id="uKe-iw-uQZ"/>
-                            <constraint firstAttribute="trailing" secondItem="CY1-L5-HZg" secondAttribute="trailing" constant="-30" id="yot-JZ-57N"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="nextButton" destination="CAD-yh-Sld" id="wPF-4o-U4d"/>
-                        <outlet property="phoneNumberTextField" destination="FYe-hO-hPo" id="h6m-VB-82A"/>
-                        <outlet property="termsLabel" destination="Wv1-4f-ukQ" id="GpS-bN-esL"/>
-                        <outlet property="topConstraint" destination="own-Da-Yzb" id="OnF-k1-3o9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GpI-79-Yr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3187.6923076923076" y="-95.260663507109001"/>
-        </scene>
         <!--Verification View Controller-->
         <scene sceneID="fV2-El-ezZ">
             <objects>
@@ -415,37 +324,7 @@ our Terms and Condition</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdK-hU-TIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4090.7692307692305" y="-95.260663507109001"/>
-        </scene>
-        <!--Home View Controller-->
-        <scene sceneID="XdJ-td-4KY">
-            <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="L9w-YL-Hbj" customClass="HomeViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zQl-Cz-cdl">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M6F-js-pld">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aC7-Wi-fIj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aC7-Wi-fIj" firstAttribute="trailing" secondItem="M6F-js-pld" secondAttribute="trailing" id="BNt-u2-myp"/>
-                            <constraint firstItem="M6F-js-pld" firstAttribute="leading" secondItem="aC7-Wi-fIj" secondAttribute="leading" id="F0u-d8-sha"/>
-                            <constraint firstItem="aC7-Wi-fIj" firstAttribute="bottom" secondItem="M6F-js-pld" secondAttribute="bottom" id="SIr-EO-cFS"/>
-                            <constraint firstItem="M6F-js-pld" firstAttribute="top" secondItem="aC7-Wi-fIj" secondAttribute="top" id="sjo-HS-05z"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="chatList" destination="M6F-js-pld" id="n4L-zA-sI9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ce2-VJ-rRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4991" y="-95"/>
+            <point key="canvasLocation" x="3188" y="-95"/>
         </scene>
     </scenes>
     <resources>
@@ -466,8 +345,5 @@ our Terms and Condition</string>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
