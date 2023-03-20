@@ -24,7 +24,9 @@ class RegisterViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
@@ -33,8 +35,8 @@ class RegisterViewController: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        navigationController?.pushViewController(viewController, animated: true)
+        let destinationView = storyboard.instantiateViewController(withIdentifier: "VerificationViewController")
+        navigationController?.pushViewController(destinationView, animated: true)
     }
 }
 
@@ -42,19 +44,18 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if keyboardSize.origin.y < nameTextField.frame.origin.y {
-                constraint += nameTextField.frame.origin.y - keyboardSize.origin.y
-                UIView.animate(withDuration: 0.1, animations: { () -> Void in
-                    self.topConstraint.constant -= (self.constraint + self.nameTextField.frame.height + 10)
-                    self.view.layoutIfNeeded()
-                })
-            }
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        if nameTextField.frame.origin.y != keyboardSize.height {
+            constraint = nameTextField.frame.origin.y - keyboardSize.origin.y
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                self.topConstraint.constant -= (self.constraint + self.nameTextField.frame.height + 10)
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if constraint > 0 {
+        if constraint != 0 {
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                 self.topConstraint.constant += (self.constraint + self.nameTextField.frame.height + 10)
                 self.constraint = 0
@@ -68,6 +69,8 @@ extension RegisterViewController {
         view.endEditing(true)
     }
 }
+
+// MARK: TextField Switch
 
 extension RegisterViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
