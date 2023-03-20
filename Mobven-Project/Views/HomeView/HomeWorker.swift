@@ -8,11 +8,11 @@
 import Foundation
 
 protocol HomeWorkingLogic: AnyObject {
-    func getRequestedData(completion: @escaping ((Result<AllGroups, RequestError>) -> Void))
+    func getRequestedData(token: String, completion: @escaping ((Result<AllGroups, RequestError>) -> Void))
 }
 
 final class HomeWorker: HomeWorkingLogic, HTTPClient {
-    func getRequestedData(completion: @escaping ((Result<AllGroups, RequestError>) -> Void)) {
-        sendRequest(endpoint: AllGroupsEndpoint.getAllGroups, responseModel: AllGroups.self, completion: completion)
+    func getRequestedData(token: String, completion: @escaping ((Result<AllGroups, RequestError>) -> Void)) {
+        sendRequest(endpoint: AllGroupsEndpoint.getAllGroups(token: token), responseModel: AllGroups.self, completion: completion)
     }
 }

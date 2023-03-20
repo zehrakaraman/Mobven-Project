@@ -12,6 +12,7 @@ protocol HomeBusinessLogic: AnyObject {
 }
 
 protocol HomeDataStore: AnyObject {
+    var authorizedPerson: Authorized? { get set }
     var allGroupsResponse: AllGroups? { get set }
 }
 
@@ -19,10 +20,12 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     
     var presenter: HomePresentationLogic?
     var worker: HomeWorkingLogic = HomeWorker()
+    var authorizedPerson: Authorized?
     var allGroupsResponse: AllGroups?
     
     func fetchData() {
-        worker.getRequestedData() { result in
+        guard let authorizedPerson = authorizedPerson else { return }
+        worker.getRequestedData(token: authorizedPerson.accessToken) { result in
             switch result {
             case .success(let response):
                 self.allGroupsResponse = response
