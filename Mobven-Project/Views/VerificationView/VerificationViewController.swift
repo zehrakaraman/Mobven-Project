@@ -41,23 +41,27 @@ class VerificationViewController: UIViewController {
             action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
-    
+}
+
+// MARK: Keyboard Configuration
+
+extension VerificationViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if textFields.frame.origin.y != keyboardSize.height {
-                constraint = textFields.frame.origin.y - keyboardSize.origin.y
-                UIView.animate(withDuration: 0.1, animations: { () -> Void in
-                    self.topConstraint.constant -= (self.constraint + self.textFields.frame.height + 10)
-                    self.view.layoutIfNeeded()
-                })
-            }
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        if textFields.frame.origin.y < keyboardSize.height {
+            constraint = textFields.frame.origin.y - keyboardSize.origin.y
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                self.topConstraint.constant -= (self.constraint + self.textFields.frame.height + 10)
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if let _ = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if constraint != 0 {
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
                 self.topConstraint.constant += (self.constraint + self.textFields.frame.height + 10)
+                self.constraint = 0
                 self.view.layoutIfNeeded()
                 self.dismissKeyboard()
             })
@@ -67,7 +71,11 @@ class VerificationViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+}
+
+// MARK: TextField Switch
+
+extension VerificationViewController {
     @objc func switchBasedNextTextField(_ textField: UITextField) {
         if textField.text?.count == 1 {
             switch textField {
@@ -84,9 +92,9 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        navigationController?.pushViewController(destinationVC, animated: true)
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let destinationView = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        navigationController?.pushViewController(destinationView, animated: true)
         navigationItem.backButtonTitle = ""
     }
 }
