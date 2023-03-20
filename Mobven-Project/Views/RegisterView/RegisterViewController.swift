@@ -28,6 +28,19 @@ class RegisterViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    @IBAction func imageButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: Keyboard Configuration
+
+extension RegisterViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if keyboardSize.origin.y < nameTextField.frame.origin.y {
@@ -54,15 +67,6 @@ class RegisterViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    @IBAction func imageButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        navigationController?.pushViewController(viewController, animated: true)
-    }
 }
 
 extension RegisterViewController {
@@ -72,6 +76,3 @@ extension RegisterViewController {
         return false
     }
 }
-
-
-
