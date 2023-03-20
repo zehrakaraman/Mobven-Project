@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: GradientButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         navigationController?.pushViewController(viewController, animated: true)
         navigationItem.backButtonTitle = ""

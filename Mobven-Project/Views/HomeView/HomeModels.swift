@@ -47,3 +47,4 @@ enum Home {
         
     }
 }
+// swiftlint:enable nesting
