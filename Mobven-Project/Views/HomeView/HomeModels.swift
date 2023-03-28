@@ -17,11 +17,12 @@ enum Home {
         }
         
         struct Response {
-            var allGroupsResponse: AllGroups
+//            var allGroupsResponse: AllGroupsResponse
+//            var allUsersResponse: AllUsersResponse
         }
         
         struct ViewModel {
-            let allGroupsListViewModel: [Home.Case.ViewModel.GroupsModel]
+//            let allGroupsListViewModel: [Home.Case.ViewModel.GroupsModel]
             
             struct GroupsModel {
                 let name: String
@@ -38,7 +39,7 @@ enum Home {
             }
 
             struct User {
-                public let nameSurname: String
+                public let fullName: String
                 public let email: String
                 public let title: String
                 public let profilePhoto: String?

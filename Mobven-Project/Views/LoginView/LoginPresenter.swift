@@ -17,13 +17,13 @@ final class LoginPresenter: LoginPresentationLogic {
     
     func presentLogin(response: Login.Case.Response) {
         let authorized = response.loginResponse.body
-        let authorizedPerson = Login.Case.ViewModel(
-            nameSurname: authorized.nameSurname,
+        let authorizedUser = Login.Case.ViewModel(
+            nameSurname: authorized.fullName,
             email: authorized.email,
-            profilePhoto: authorized.profilePhoto ?? "",
+            profilePhoto: authorized.profilePhoto,
             accessToken: authorized.accessToken)
         
-        viewController?.displayAuthorizedPerson(viewModel: authorizedPerson)
+        viewController?.displayAuthorizedPerson(viewModel: authorizedUser)
     }
     
 }

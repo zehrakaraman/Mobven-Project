@@ -85,3 +85,25 @@ extension CAGradientLayer {
     }
 }
 
+extension UIImageView {
+    func displayImage(with path: String?) {
+        if let path = path {
+            let request = URLRequest(url: URL(string: "http://\(path)")!)
+            
+            URLSession.shared.dataTask(with: request) { data, _, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            }
+            .resume()
+        } else {
+            DispatchQueue.main.async { return }
+        }
+    }
+}
+

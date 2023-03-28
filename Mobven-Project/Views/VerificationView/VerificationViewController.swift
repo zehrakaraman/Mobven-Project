@@ -48,7 +48,7 @@ class VerificationViewController: UIViewController {
 extension VerificationViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        if textFields.frame.origin.y < keyboardSize.height {
+        if textFields.frame.origin.y > keyboardSize.origin.y {
             constraint = textFields.frame.origin.y - keyboardSize.origin.y
             UIView.animate(withDuration: 0.1, animations: { () -> Void in
                 self.topConstraint.constant -= (self.constraint + self.textFields.frame.height + 10)
