@@ -23,7 +23,7 @@ class CommunityListCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(model: Home.Case.ViewModel.GroupsModel) {
-        configureNullProfile()
+        communityImage.configureEmptyPhoto(cornerRadius: 8.0)
         communityName.text = model.name
         
         // MARK: Last message configuration
@@ -44,23 +44,7 @@ class CommunityListCollectionViewCell: UICollectionViewCell {
 //                self.communityImage.displayImage(with: image)
 //            }
 //        } else {
-//            configureNullProfile()
+//            
 //        }
-    }
-    
-    private func configureNullProfile() {
-        let view = UIImageView(image: UIImage(named: "userIcon"))
-        communityImage.addSubview(view)
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            view.widthAnchor.constraint(equalToConstant: 20),
-            view.heightAnchor.constraint(equalToConstant: 20),
-            view.centerXAnchor.constraint(equalTo: communityImage.centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: communityImage.centerYAnchor)
-        ])
-        
-        communityImage.layer.cornerRadius = 8.0
-        communityImage.layer.backgroundColor = UIColor(named: "Purple - Light")?.cgColor
     }
 }

@@ -28,7 +28,6 @@ final class HomeViewController: UIViewController, HTTPClient {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -138,5 +137,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
               let model = usersViewModel?[indexPath.row] else { return UITableViewCell() }
         cell.configure(user: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router?.routeToChat(index: indexPath.row)
     }
 }

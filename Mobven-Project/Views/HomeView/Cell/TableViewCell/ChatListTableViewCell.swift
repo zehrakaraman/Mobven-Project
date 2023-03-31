@@ -23,33 +23,19 @@ class ChatListTableViewCell: UITableViewCell {
     func configure(user: Home.Case.ViewModel.User) {
         userTitle.text = user.fullName
         userDescription.text = user.title
-        configureNullProfile()
+        userImage.configureEmptyPhoto(cornerRadius: userImage.frame.height / 2)
 
 //        if let image = model.groupPhoto {
 //            DispatchQueue.main.async {
 //                self.communityImage.displayImage(with: image)
 //            }
 //        } else {
-//            configureNullProfile()
+//            
 //        }
 
     }
     
-    private func configureNullProfile() {
-        let view = UIImageView(image: UIImage(named: "userIcon"))
-        userImage.addSubview(view)
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            view.widthAnchor.constraint(equalToConstant: 20),
-            view.heightAnchor.constraint(equalToConstant: 20),
-            view.centerXAnchor.constraint(equalTo: userImage.centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: userImage.centerYAnchor)
-        ])
-        
-        userImage.layer.cornerRadius = userImage.frame.height / 2
-        userImage.layer.backgroundColor = UIColor(named: "Purple - Light")?.cgColor
-    }
+    
 }
 
 
