@@ -43,6 +43,9 @@ enum Home {
                 public let email: String
                 public let title: String
                 public let profilePhoto: String?
+                public let phoneNumber: String?
+                public let createdAt: String?
+                public let updatedAt: String?
             }
         }
         

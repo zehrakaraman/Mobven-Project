@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeRoutingLogic: AnyObject {
-    
+    func routeToChat(index: Int)
 }
 
 protocol HomeDataPassing: AnyObject {
@@ -21,6 +21,10 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
     var dataStore: HomeDataStore?
     
     func routeToChat(index: Int) {
-        
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        let destinationView = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        destinationView.router?.dataStore?.authorizedUser = dataStore?.authorizedUser
+        destinationView.router?.dataStore?.user = viewController?.usersViewModel?[index]
+        viewController?.navigationController?.pushViewController(destinationView, animated: true)
     }
 }

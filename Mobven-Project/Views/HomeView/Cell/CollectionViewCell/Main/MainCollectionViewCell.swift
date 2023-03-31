@@ -11,15 +11,15 @@ class MainCollectionViewCell: UICollectionViewCell {
     static let nibName = "MainCollectionViewCell"
     static let identifier = "MainCollectionViewCell"
 
-    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyViewText: UILabel!
     
     var viewModel: [Home.Case.ViewModel.GroupsModel]? {
         didSet {
             if let viewModel = viewModel, !viewModel.isEmpty {
-                messageLabel.isHidden = true
+                emptyViewText.isHidden = true
             } else {
-                messageLabel.isHidden = false
+                emptyViewText.isHidden = false
             }
             collectionView.reloadData()
         }
@@ -28,12 +28,12 @@ class MainCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        messageLabel.isHidden = true
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
         collectionView.register(.init(nibName: "CommunityListCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "CommunityListCollectionViewCell")
+        
+        emptyViewText.isHidden = false
     }
 }
 
@@ -64,8 +64,5 @@ extension MainCollectionViewCell: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         10
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
 }
+

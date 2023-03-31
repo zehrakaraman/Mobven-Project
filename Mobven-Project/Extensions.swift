@@ -105,5 +105,21 @@ extension UIImageView {
             DispatchQueue.main.async { return }
         }
     }
+    
+    func configureEmptyPhoto(cornerRadius: CGFloat) {
+        let view = UIImageView(image: UIImage(named: "userIcon"))
+        addSubview(view)
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.widthAnchor.constraint(equalToConstant: 20),
+            view.heightAnchor.constraint(equalToConstant: 20),
+            view.centerXAnchor.constraint(equalTo: centerXAnchor),
+            view.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+        
+        layer.cornerRadius = cornerRadius
+        layer.backgroundColor = UIColor(named: "Purple - Light")?.cgColor
+    }
 }
 

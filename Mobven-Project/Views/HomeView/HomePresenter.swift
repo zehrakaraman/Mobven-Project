@@ -25,7 +25,10 @@ final class HomePresenter: HomePresentationLogic {
                     fullName: user.fullName,
                     email: user.email,
                     title: user.title,
-                    profilePhoto: user.profilePhoto)
+                    profilePhoto: user.profilePhoto,
+                    phoneNumber: nil,
+                    createdAt: nil,
+                    updatedAt: nil)
             })
             
             let lastMessage = Home.Case.ViewModel.Message(
@@ -52,8 +55,11 @@ final class HomePresenter: HomePresentationLogic {
                 fullName: user.fullName,
                 email: user.email,
                 title: user.title,
-                profilePhoto: user.profilePhoto))
-        }
+                profilePhoto: user.profilePhoto,
+                phoneNumber: user.phoneNumber,
+                createdAt: user.createdAt,
+                updatedAt: user.updatedAt)
+        )}
         
         viewController?.displayAllUsers(viewModel: allUsers)
     }
