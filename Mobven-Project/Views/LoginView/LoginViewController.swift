@@ -12,6 +12,7 @@ protocol LoginDisplayLogic: AnyObject {
 }
 
 final class LoginViewController: UIViewController {
+    static let identifier = "LoginViewController"
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailTextField: UITextField!
@@ -113,7 +114,7 @@ extension LoginViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         
-        if termsLabel.frame.origin.y != keyboardSize.height {
+        if termsLabel.frame.origin.y >= keyboardSize.origin.y {
             constraint = termsLabel.frame.origin.y - keyboardSize.origin.y
             UIView.animate(withDuration: 0.1, animations: { () -> Void in
                 self.topConstraint.constant -= (self.constraint + self.termsLabel.frame.height + 10)

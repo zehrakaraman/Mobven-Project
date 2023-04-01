@@ -101,7 +101,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authorizedUserName" destination="U9u-zI-zwQ" id="qZX-Nj-jO1"/>
+                        <outlet property="authorizedUserName" destination="U9u-zI-zwQ" id="JFp-c2-SeD"/>
                         <outlet property="chatList" destination="GLU-gY-97H" id="DaD-4h-9Lf"/>
                         <outlet property="communityList" destination="49N-Tf-WvB" id="o1N-UY-KMm"/>
                     </connections>

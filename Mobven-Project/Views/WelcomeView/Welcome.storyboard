@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="D3m-6j-bBI">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="nxe-uw-h5I" customClass="WelcomeViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-je-gA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-lower" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-kM-Uvj">
+                                <rect key="frame" x="0.0" y="484" width="414" height="412"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-upper" translatesAutoresizingMaskIntoConstraints="NO" id="iDu-eA-qoP">
+                                <rect key="frame" x="0.0" y="379" width="414" height="517"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ka6-2T-zVE">
+                                <rect key="frame" x="30" y="382.5" width="330" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ip-Fx-eH7" customClass="GradientButton" customModule="MobvenDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZDA-uY-q4u"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Register">
+                                            <color key="baseForegroundColor" name="Blue - Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="7jk-By-NiE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhw-UB-zUK" customClass="GradientButton" customModule="MobvenDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="330" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="23y-dZ-yr8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <color key="baseForegroundColor" name="Blue - Dark"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="70P-R1-tb4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="rRD-g9-w2z"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93J-Bh-dkm">
+                                <rect key="frame" x="134" y="248" width="146.5" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="93J-Bh-dkm" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="200" id="50W-Mq-y6Q"/>
+                            <constraint firstItem="ka6-2T-zVE" firstAttribute="top" secondItem="93J-Bh-dkm" secondAttribute="bottom" constant="100" id="8Mh-9f-tLq"/>
+                            <constraint firstAttribute="bottom" secondItem="fg5-kM-Uvj" secondAttribute="bottom" id="Ih1-0Y-jlW"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="fg5-kM-Uvj" secondAttribute="trailing" id="Phf-D0-ZnT"/>
+                            <constraint firstItem="93J-Bh-dkm" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="S3q-d6-blp"/>
+                            <constraint firstItem="fg5-kM-Uvj" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="UFl-N9-bzE"/>
+                            <constraint firstAttribute="trailing" secondItem="iDu-eA-qoP" secondAttribute="trailing" id="haj-5g-61Y"/>
+                            <constraint firstItem="ka6-2T-zVE" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="30" id="htK-z9-4GV"/>
+                            <constraint firstAttribute="bottom" secondItem="iDu-eA-qoP" secondAttribute="bottom" id="ijZ-aw-5Ka"/>
+                            <constraint firstItem="iDu-eA-qoP" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="rfv-7B-P9N"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="-41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shapedBackground-lower" width="375" height="412"/>
+        <image name="shapedBackground-upper" width="375" height="517"/>
+        <namedColor name="Blue - Dark">
+            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
