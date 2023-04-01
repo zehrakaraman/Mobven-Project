@@ -25,6 +25,5 @@ final class LoginRouter: LoginRoutingLogic, LoginDataPassing {
         let destinationView = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         destinationView.router?.dataStore?.authorizedUser = dataStore?.loginResponse?.body
         viewController?.navigationController?.pushViewController(destinationView, animated: true)
-        viewController?.navigationController?.navigationBar.isHidden = true
     }
 }

@@ -39,6 +39,8 @@ final class HomeViewController: UIViewController, HTTPClient {
         super.viewDidLoad()
         
         authorizedUserName.text = router?.dataStore?.authorizedUser?.fullName
+        authorizedUserName.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(displayProfile)))
+        authorizedUserName.isUserInteractionEnabled = true
         
         chatList.layer.cornerRadius = 20
                 
@@ -79,6 +81,10 @@ final class HomeViewController: UIViewController, HTTPClient {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+    }
+    
+    @objc func displayProfile() {
+        router?.routeToAccountProfile()
     }
 }
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nxe-uw-h5I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="D3m-6j-bBI">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="nxe-uw-h5I" customClass="RegisterViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-je-gA4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapedBackground-lower" translatesAutoresizingMaskIntoConstraints="NO" id="g7J-2B-mBO">
+                                <rect key="frame" x="-30" y="296" width="474" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="CRm-o5-m3k"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4O-lG-EYr">
+                                <rect key="frame" x="30" y="422.5" width="354" height="50"/>
+                                <color key="backgroundColor" name="Purple - Soft"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vlO-y5-svb"/>
+                                </constraints>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsQ-zu-L97">
+                                <rect key="frame" x="30" y="400.5" width="37" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WZ-im-GGO">
+                                <rect key="frame" x="147" y="260.5" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="1jB-E1-usu"/>
+                                    <constraint firstAttribute="width" secondItem="6WZ-im-GGO" secondAttribute="height" multiplier="1:1" id="Phb-I8-DN7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="personalAccountImage"/>
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="6No-7D-lNQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-dq-lc1">
+                                <rect key="frame" x="30" y="148" width="354" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" name="Blue - Dark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fill your account information below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbD-8R-vAQ">
+                                <rect key="frame" x="30" y="195.5" width="354" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" name="Blue - Light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcg-Uk-kpb">
+                                <rect key="frame" x="324" y="806" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lcv-gl-nwG"/>
+                                    <constraint firstAttribute="width" secondItem="bcg-Uk-kpb" secondAttribute="height" multiplier="1:1" id="waD-VM-wAi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="nextButton"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="6wi-Je-7TM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6WZ-im-GGO" firstAttribute="width" secondItem="6WZ-im-GGO" secondAttribute="height" multiplier="1:1" id="5vt-e9-CEN"/>
+                            <constraint firstItem="vbD-8R-vAQ" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="30" id="5yS-15-ve1"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="vbD-8R-vAQ" secondAttribute="trailing" constant="30" id="Aap-O7-oZd"/>
+                            <constraint firstItem="vbD-8R-vAQ" firstAttribute="top" secondItem="XXL-dq-lc1" secondAttribute="bottom" constant="13" id="DAk-qZ-Bgc"/>
+                            <constraint firstItem="6WZ-im-GGO" firstAttribute="top" secondItem="vbD-8R-vAQ" secondAttribute="bottom" constant="50" id="Fd9-Gx-fAa"/>
+                            <constraint firstItem="XXL-dq-lc1" firstAttribute="top" secondItem="acR-sl-ate" secondAttribute="top" constant="100" id="I8E-8D-Lr0"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="g7J-2B-mBO" secondAttribute="trailing" constant="-30" id="IUU-FI-wjZ"/>
+                            <constraint firstAttribute="bottom" secondItem="g7J-2B-mBO" secondAttribute="bottom" id="Kki-gX-8qW"/>
+                            <constraint firstItem="AsQ-zu-L97" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="30" id="NYI-Gh-jXu"/>
+                            <constraint firstItem="6WZ-im-GGO" firstAttribute="centerX" secondItem="chM-je-gA4" secondAttribute="centerX" id="OqN-Yu-Kj8"/>
+                            <constraint firstItem="Y4O-lG-EYr" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="30" id="Teg-Rh-fu5"/>
+                            <constraint firstItem="AsQ-zu-L97" firstAttribute="top" secondItem="6WZ-im-GGO" secondAttribute="bottom" constant="20" id="bIY-AU-iCw"/>
+                            <constraint firstItem="g7J-2B-mBO" firstAttribute="leading" secondItem="chM-je-gA4" secondAttribute="leading" constant="-30" id="cbA-Gu-GTi"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="XXL-dq-lc1" secondAttribute="trailing" constant="30" id="dgh-jP-3HM"/>
+                            <constraint firstAttribute="bottom" secondItem="bcg-Uk-kpb" secondAttribute="bottom" constant="30" id="fgp-D6-teW"/>
+                            <constraint firstItem="XXL-dq-lc1" firstAttribute="leading" secondItem="chM-je-gA4" secondAttribute="leading" constant="30" id="if1-VO-Htk"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="bcg-Uk-kpb" secondAttribute="trailing" constant="30" id="ma1-pi-uli"/>
+                            <constraint firstItem="bcg-Uk-kpb" firstAttribute="width" secondItem="bcg-Uk-kpb" secondAttribute="height" multiplier="1:1" id="oTX-7r-L0j"/>
+                            <constraint firstItem="Y4O-lG-EYr" firstAttribute="top" secondItem="AsQ-zu-L97" secondAttribute="bottom" constant="7" id="ogx-5Q-WGM"/>
+                            <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="Y4O-lG-EYr" secondAttribute="trailing" constant="30" id="zQ8-W8-1JJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountImageButton" destination="6WZ-im-GGO" id="0xw-Fb-lYq"/>
+                        <outlet property="nameTextField" destination="Y4O-lG-EYr" id="5oQ-lz-NGf"/>
+                        <outlet property="nextButton" destination="bcg-Uk-kpb" id="Xun-qr-R7p"/>
+                        <outlet property="topConstraint" destination="I8E-8D-Lr0" id="jg0-Gh-yUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nextButton" width="120" height="107"/>
+        <image name="personalAccountImage" width="120" height="120"/>
+        <image name="shapedBackground-lower" width="375" height="412"/>
+        <namedColor name="Blue - Dark">
+            <color red="0.10196078431372549" green="0.066666666666666666" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue - Light">
+            <color red="0.52156862745098043" green="0.49803921568627452" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple - Soft">
+            <color red="0.96078431372549022" green="0.95686274509803926" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,26 +2,45 @@
 //  VerificationViewController.swift
 //  Mobven-Project
 //
-//  Created by Zehra on 5.03.2023.
+//  Created by Zehra on 1.04.2023.
 //
 
 import UIKit
 
-class VerificationViewController: UIViewController {
+protocol VerificationDisplayLogic: AnyObject {
+    
+}
 
+final class VerificationViewController: UIViewController {
+    static let identifier = "VerificationViewController"
+    
     @IBOutlet weak var textFields: UIStackView!
     @IBOutlet weak var codeTextField1: UITextField!
     @IBOutlet weak var codeTextField2: UITextField!
     @IBOutlet weak var codeTextField3: UITextField!
     @IBOutlet weak var codeTextField4: UITextField!
-    
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     var constraint: CGFloat = 0
     
+    var interactor: VerificationBusinessLogic?
+    var router: (VerificationRoutingLogic & VerificationDataPassing)?
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureTextField([codeTextField1,
                             codeTextField2,
                             codeTextField3,
@@ -41,6 +60,29 @@ class VerificationViewController: UIViewController {
             action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        router?.routeToLogin()
+    }
+    
+    // MARK: Setup
+    
+    private func setup() {
+        let viewController = self
+        let interactor = VerificationInteractor()
+        let presenter = VerificationPresenter()
+        let router = VerificationRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+}
+
+extension VerificationViewController: VerificationDisplayLogic {
+    
 }
 
 // MARK: Keyboard Configuration
@@ -56,7 +98,7 @@ extension VerificationViewController {
             })
         }
     }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         if constraint != 0 {
             UIView.animate(withDuration: 0.2, animations: { () -> Void in
@@ -67,7 +109,7 @@ extension VerificationViewController {
             })
         }
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -89,12 +131,5 @@ extension VerificationViewController {
                 self.codeTextField4.resignFirstResponder()
             }
         }
-    }
-    
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        let destinationView = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-        navigationController?.pushViewController(destinationView, animated: true)
-        navigationItem.backButtonTitle = ""
     }
 }

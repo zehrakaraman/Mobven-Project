@@ -8,6 +8,7 @@
 import UIKit
 
 protocol HomeRoutingLogic: AnyObject {
+    func routeToAccountProfile()
     func routeToChat(index: Int)
 }
 
@@ -19,6 +20,12 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
     
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?
+    
+    func routeToAccountProfile() {
+        let storyboard = UIStoryboard(name: "AccountProfile", bundle: nil)
+        let destinationView = storyboard.instantiateViewController(withIdentifier: AccountProfileViewController.identifier) as! AccountProfileViewController
+        viewController?.navigationController?.pushViewController(destinationView, animated: true)
+    }
     
     func routeToChat(index: Int) {
         let storyboard = UIStoryboard(name: "Chat", bundle: nil)
