@@ -51,6 +51,10 @@ final class RegisterViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.backButtonTitle = ""
+    }
+    
     @IBAction func imageButtonTapped(_ sender: UIButton) {
     }
     

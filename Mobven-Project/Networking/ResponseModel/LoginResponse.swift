@@ -15,7 +15,7 @@ public struct LoginResponse: Codable {
 
 public struct Authorized: Codable {
     public let id: String
-    public let fullName: String
+    public var fullName: String
     public let email: String
     public let profilePhoto: String
     public let accessToken: String

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0F522D29DC27C40095253A /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F522C29DC27C40095253A /* CoreDataError.swift */; };
+		FA0F523129DC546B0095253A /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F523029DC546B0095253A /* KeyChainManager.swift */; };
 		FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459229C341D7005E3F9B /* Endpoint.swift */; };
 		FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459429C34250005E3F9B /* RequestMethod.swift */; };
 		FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */; };
@@ -29,6 +31,7 @@
 		FA8E141B29D8244300D5B5E9 /* VerificationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E141429D8244300D5B5E9 /* VerificationWorker.swift */; };
 		FA8E141C29D8244300D5B5E9 /* VerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E141529D8244300D5B5E9 /* VerificationRouter.swift */; };
 		FA90B40B29B61AE800EC0D39 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90B40A29B61AE800EC0D39 /* GradientButton.swift */; };
+		FA94CE4F29DEA57900A2BEDA /* GenderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94CE4E29DEA57900A2BEDA /* GenderContentView.swift */; };
 		FA97426D29D7B2C100016D0D /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA97426629D7B2C100016D0D /* Welcome.storyboard */; };
 		FA97426E29D7B2C100016D0D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97426729D7B2C100016D0D /* WelcomeViewController.swift */; };
 		FA97426F29D7B2C100016D0D /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97426829D7B2C100016D0D /* WelcomePresenter.swift */; };
@@ -43,6 +46,12 @@
 		FA97427F29D7B7AF00016D0D /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97427829D7B7AF00016D0D /* RegisterModels.swift */; };
 		FA97428029D7B7AF00016D0D /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97427929D7B7AF00016D0D /* RegisterWorker.swift */; };
 		FA97428129D7B7AF00016D0D /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97427A29D7B7AF00016D0D /* RegisterRouter.swift */; };
+		FA97FDFF29DD9F0800FD3C75 /* AccountProfileViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FDFE29DD9F0800FD3C75 /* AccountProfileViewController+Section.swift */; };
+		FA97FE0129DDF51800FD3C75 /* AccountProfileViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FE0029DDF51800FD3C75 /* AccountProfileViewController+Row.swift */; };
+		FA97FE0329DDF63900FD3C75 /* AccountProfileViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FE0229DDF63900FD3C75 /* AccountProfileViewController+CellConfiguration.swift */; };
+		FA97FE0729DDF7E200FD3C75 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FE0629DDF7E200FD3C75 /* TextFieldContentView.swift */; };
+		FA97FE0929DDF82400FD3C75 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FE0829DDF82400FD3C75 /* UIView+PinnedSubview.swift */; };
+		FA97FE0B29DDF97C00FD3C75 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97FE0A29DDF97C00FD3C75 /* DatePickerContentView.swift */; };
 		FAA4952B29D77236007CE292 /* AccountProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA4952429D77236007CE292 /* AccountProfile.storyboard */; };
 		FAA4952C29D77236007CE292 /* AccountProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4952529D77236007CE292 /* AccountProfileViewController.swift */; };
 		FAA4952D29D77236007CE292 /* AccountProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4952629D77236007CE292 /* AccountProfilePresenter.swift */; };
@@ -52,6 +61,14 @@
 		FAA4953129D77236007CE292 /* AccountProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4952A29D77236007CE292 /* AccountProfileRouter.swift */; };
 		FAAD4F4D29CE3E0400EEA954 /* AllUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD4F4C29CE3E0400EEA954 /* AllUsersResponse.swift */; };
 		FAAD4F4F29CE3E4A00EEA954 /* AllUsersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD4F4E29CE3E4A00EEA954 /* AllUsersEndpoint.swift */; };
+		FACA296529DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACA296329DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld */; };
+		FACA296629DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACA296329DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld */; };
+		FACA296729DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACA296329DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld */; };
+		FACA297229DBC97E001EDC48 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA297029DBC97E001EDC48 /* Account+CoreDataClass.swift */; };
+		FACA297529DBC97E001EDC48 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA297129DBC97E001EDC48 /* Account+CoreDataProperties.swift */; };
+		FACA297F29DBD6A1001EDC48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA297E29DBD6A1001EDC48 /* CoreDataManager.swift */; };
+		FACA298029DBD6A1001EDC48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA297E29DBD6A1001EDC48 /* CoreDataManager.swift */; };
+		FACA298129DBD6A1001EDC48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA297E29DBD6A1001EDC48 /* CoreDataManager.swift */; };
 		FACFF14529B35B7400E6B193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14429B35B7400E6B193 /* AppDelegate.swift */; };
 		FACFF14729B35B7400E6B193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF14629B35B7400E6B193 /* SceneDelegate.swift */; };
 		FACFF14E29B35B7600E6B193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACFF14D29B35B7600E6B193 /* Assets.xcassets */; };
@@ -107,6 +124,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0F522C29DC27C40095253A /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		FA0F523029DC546B0095253A /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		FA28459229C341D7005E3F9B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FA28459429C34250005E3F9B /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		FA28459629C34411005E3F9B /* AllGroupsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsEndpoint.swift; sourceTree = "<group>"; };
@@ -128,6 +147,7 @@
 		FA8E141429D8244300D5B5E9 /* VerificationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationWorker.swift; sourceTree = "<group>"; };
 		FA8E141529D8244300D5B5E9 /* VerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationRouter.swift; sourceTree = "<group>"; };
 		FA90B40A29B61AE800EC0D39 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		FA94CE4E29DEA57900A2BEDA /* GenderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderContentView.swift; sourceTree = "<group>"; };
 		FA97426629D7B2C100016D0D /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		FA97426729D7B2C100016D0D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA97426829D7B2C100016D0D /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
@@ -142,6 +162,12 @@
 		FA97427829D7B7AF00016D0D /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
 		FA97427929D7B7AF00016D0D /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
 		FA97427A29D7B7AF00016D0D /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		FA97FDFE29DD9F0800FD3C75 /* AccountProfileViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountProfileViewController+Section.swift"; sourceTree = "<group>"; };
+		FA97FE0029DDF51800FD3C75 /* AccountProfileViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountProfileViewController+Row.swift"; sourceTree = "<group>"; };
+		FA97FE0229DDF63900FD3C75 /* AccountProfileViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountProfileViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
+		FA97FE0629DDF7E200FD3C75 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
+		FA97FE0829DDF82400FD3C75 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
+		FA97FE0A29DDF97C00FD3C75 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
 		FAA4952429D77236007CE292 /* AccountProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountProfile.storyboard; sourceTree = "<group>"; };
 		FAA4952529D77236007CE292 /* AccountProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountProfileViewController.swift; sourceTree = "<group>"; };
 		FAA4952629D77236007CE292 /* AccountProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountProfilePresenter.swift; sourceTree = "<group>"; };
@@ -151,6 +177,10 @@
 		FAA4952A29D77236007CE292 /* AccountProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountProfileRouter.swift; sourceTree = "<group>"; };
 		FAAD4F4C29CE3E0400EEA954 /* AllUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersResponse.swift; sourceTree = "<group>"; };
 		FAAD4F4E29CE3E4A00EEA954 /* AllUsersEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersEndpoint.swift; sourceTree = "<group>"; };
+		FACA296429DBC7D2001EDC48 /* Mobven-Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Mobven-Project.xcdatamodel"; sourceTree = "<group>"; };
+		FACA297029DBC97E001EDC48 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FACA297129DBC97E001EDC48 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FACA297E29DBD6A1001EDC48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FACFF14129B35B7400E6B193 /* MobvenDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobvenDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACFF14429B35B7400E6B193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACFF14629B35B7400E6B193 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +428,27 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		FA97FE0429DDF71400FD3C75 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FA97FE0229DDF63900FD3C75 /* AccountProfileViewController+CellConfiguration.swift */,
+				FA97FE0029DDF51800FD3C75 /* AccountProfileViewController+Row.swift */,
+				FA97FDFE29DD9F0800FD3C75 /* AccountProfileViewController+Section.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		FA97FE0529DDF7BA00FD3C75 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				FA97FE0629DDF7E200FD3C75 /* TextFieldContentView.swift */,
+				FA94CE4E29DEA57900A2BEDA /* GenderContentView.swift */,
+				FA97FE0A29DDF97C00FD3C75 /* DatePickerContentView.swift */,
+				FA97FE0829DDF82400FD3C75 /* UIView+PinnedSubview.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
 		FAA4952329D77197007CE292 /* AccountProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,8 +459,22 @@
 				FAA4952829D77236007CE292 /* AccountProfileModels.swift */,
 				FAA4952929D77236007CE292 /* AccountProfileWorker.swift */,
 				FAA4952A29D77236007CE292 /* AccountProfileRouter.swift */,
+				FA97FE0429DDF71400FD3C75 /* CollectionView */,
+				FA97FE0529DDF7BA00FD3C75 /* ContentViews */,
 			);
 			path = AccountProfile;
+			sourceTree = "<group>";
+		};
+		FACA297929DBC9C6001EDC48 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FACA297029DBC97E001EDC48 /* Account+CoreDataClass.swift */,
+				FACA297129DBC97E001EDC48 /* Account+CoreDataProperties.swift */,
+				FACA296329DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld */,
+				FACA297E29DBD6A1001EDC48 /* CoreDataManager.swift */,
+				FA0F522C29DC27C40095253A /* CoreDataError.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		FACFF13829B35B7400E6B193 = {
@@ -436,11 +501,13 @@
 		FACFF14329B35B7400E6B193 /* Mobven-Project */ = {
 			isa = PBXGroup;
 			children = (
+				FACA297929DBC9C6001EDC48 /* CoreData */,
 				FADC2E4A29B3887100485933 /* Common */,
 				FA28458D29C34108005E3F9B /* Networking */,
 				FA15B8BC29B51C280010F3A3 /* Views */,
 				FAD3B40829B3BF0E00EB97C8 /* Extensions.swift */,
 				FA90B40A29B61AE800EC0D39 /* GradientButton.swift */,
+				FA0F523029DC546B0095253A /* KeyChainManager.swift */,
 				FACFF15229B35B7600E6B193 /* Info.plist */,
 			);
 			path = "Mobven-Project";
@@ -694,6 +761,7 @@
 				FA28459529C34250005E3F9B /* RequestMethod.swift in Sources */,
 				FAED4A9C29CC6104008A699D /* CommunityListCollectionViewCell.swift in Sources */,
 				FA97428129D7B7AF00016D0D /* RegisterRouter.swift in Sources */,
+				FACA297529DBC97E001EDC48 /* Account+CoreDataProperties.swift in Sources */,
 				FA97426E29D7B2C100016D0D /* WelcomeViewController.swift in Sources */,
 				FAA4953129D77236007CE292 /* AccountProfileRouter.swift in Sources */,
 				FA97427D29D7B7AF00016D0D /* RegisterPresenter.swift in Sources */,
@@ -701,9 +769,11 @@
 				FAD3B40929B3BF0E00EB97C8 /* Extensions.swift in Sources */,
 				FA97427029D7B2C100016D0D /* WelcomeInteractor.swift in Sources */,
 				FA5AF03629CF3E9500B10145 /* MainCollectionViewCell.swift in Sources */,
+				FA97FDFF29DD9F0800FD3C75 /* AccountProfileViewController+Section.swift in Sources */,
 				FADFBD3029D58A5700989530 /* ChatWorker.swift in Sources */,
 				FAF2BEAD29C7D59600D4C19B /* LoginWorker.swift in Sources */,
 				FAF2BEAE29C7D59600D4C19B /* LoginRouter.swift in Sources */,
+				FACA297229DBC97E001EDC48 /* Account+CoreDataClass.swift in Sources */,
 				FA28459729C34411005E3F9B /* AllGroupsEndpoint.swift in Sources */,
 				FAF2BEAA29C7D59600D4C19B /* LoginPresenter.swift in Sources */,
 				FAF2BEAC29C7D59600D4C19B /* LoginModels.swift in Sources */,
@@ -717,14 +787,22 @@
 				FA8E141729D8244300D5B5E9 /* VerificationViewController.swift in Sources */,
 				FADFBD2E29D58A5700989530 /* ChatInteractor.swift in Sources */,
 				FA97427329D7B2C100016D0D /* WelcomeRouter.swift in Sources */,
+				FA0F523129DC546B0095253A /* KeyChainManager.swift in Sources */,
 				FADFBD3129D58A5700989530 /* ChatRouter.swift in Sources */,
 				FAF2BEA929C7D59600D4C19B /* LoginViewController.swift in Sources */,
+				FA94CE4F29DEA57900A2BEDA /* GenderContentView.swift in Sources */,
+				FACA297F29DBD6A1001EDC48 /* CoreDataManager.swift in Sources */,
+				FA97FE0929DDF82400FD3C75 /* UIView+PinnedSubview.swift in Sources */,
 				FAE56B7F29C59BD200479D09 /* HomePresenter.swift in Sources */,
 				FAF2BEA029C7C24A00D4C19B /* LoginResponse.swift in Sources */,
 				FAA4952C29D77236007CE292 /* AccountProfileViewController.swift in Sources */,
+				FA97FE0129DDF51800FD3C75 /* AccountProfileViewController+Row.swift in Sources */,
+				FACA296529DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */,
 				FA97427C29D7B7AF00016D0D /* RegisterViewController.swift in Sources */,
 				FA8E141A29D8244300D5B5E9 /* VerificationModels.swift in Sources */,
 				FAA4952F29D77236007CE292 /* AccountProfileModels.swift in Sources */,
+				FA0F522D29DC27C40095253A /* CoreDataError.swift in Sources */,
+				FA97FE0729DDF7E200FD3C75 /* TextFieldContentView.swift in Sources */,
 				FA97428029D7B7AF00016D0D /* RegisterWorker.swift in Sources */,
 				FAF2BEAB29C7D59600D4C19B /* LoginInteractor.swift in Sources */,
 				FAE56B7E29C59BD200479D09 /* HomeViewController.swift in Sources */,
@@ -739,6 +817,7 @@
 				FADFBD2C29D58A5700989530 /* ChatViewController.swift in Sources */,
 				FAF2BE9E29C7BD6B00D4C19B /* LoginEndpoint.swift in Sources */,
 				FA28459329C341D7005E3F9B /* Endpoint.swift in Sources */,
+				FA97FE0B29DDF97C00FD3C75 /* DatePickerContentView.swift in Sources */,
 				FAA4953029D77236007CE292 /* AccountProfileWorker.swift in Sources */,
 				FA8E141929D8244300D5B5E9 /* VerificationInteractor.swift in Sources */,
 				FA97427129D7B2C100016D0D /* WelcomeModels.swift in Sources */,
@@ -747,6 +826,7 @@
 				FA8E141B29D8244300D5B5E9 /* VerificationWorker.swift in Sources */,
 				FAE56B8229C59BD200479D09 /* HomeWorker.swift in Sources */,
 				FA583E6229D70A1D0032C563 /* ChatCollectionViewCell.swift in Sources */,
+				FA97FE0329DDF63900FD3C75 /* AccountProfileViewController+CellConfiguration.swift in Sources */,
 				FA8E141C29D8244300D5B5E9 /* VerificationRouter.swift in Sources */,
 				FA97426F29D7B2C100016D0D /* WelcomePresenter.swift in Sources */,
 			);
@@ -756,6 +836,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACA298029DBD6A1001EDC48 /* CoreDataManager.swift in Sources */,
+				FACA296629DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */,
 				FACFF15C29B35B7700E6B193 /* Mobven_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,6 +848,8 @@
 			files = (
 				FACFF16629B35B7700E6B193 /* Mobven_ProjectUITests.swift in Sources */,
 				FACFF16829B35B7700E6B193 /* Mobven_ProjectUITestsLaunchTests.swift in Sources */,
+				FACA298129DBD6A1001EDC48 /* CoreDataManager.swift in Sources */,
+				FACA296729DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1356,6 +1440,19 @@
 			defaultConfigurationName = DevelopmentRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FACA296329DBC7D2001EDC48 /* Mobven-Project.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FACA296429DBC7D2001EDC48 /* Mobven-Project.xcdatamodel */,
+			);
+			currentVersion = FACA296429DBC7D2001EDC48 /* Mobven-Project.xcdatamodel */;
+			path = "Mobven-Project.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FACFF13929B35B7400E6B193 /* Project object */;
 }

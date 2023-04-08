@@ -8,27 +8,27 @@
 import Foundation
 
 public enum AllUsersEndpoint {
-    case getAllUsers(token: String)
+    case getAllUsers
 }
 
 extension AllUsersEndpoint: Endpoint {
     public var method: RequestMethod {
         switch self {
-        case .getAllUsers(_):
+        case .getAllUsers:
             return .get
         }
     }
     
     public var path: String {
         switch self {
-        case .getAllUsers(_):
+        case .getAllUsers:
             return "/api/v1/auth"
         }
     }
     
     public var queryItems: [URLQueryItem]? {
         switch self {
-        case .getAllUsers(_):
+        case .getAllUsers:
             return nil
         }
     }
@@ -38,9 +38,14 @@ extension AllUsersEndpoint: Endpoint {
     }
     
     public var header: [String : String]? {
+        guard let tokenData = KeyChainManager.shared.loadData(
+            service: KeyChainConstants.accessTokenService,
+            account: KeyChainConstants.account) else { return nil }
+        guard let accessToken = String(data: tokenData, encoding: .utf8) else { return nil }
+        
         switch self {
-        case .getAllUsers(let token):
-            return ["Authorization": "Bearer \(token)"]
+        case .getAllUsers:
+            return ["Authorization": "Bearer \(accessToken)"]
         }
     }
 }

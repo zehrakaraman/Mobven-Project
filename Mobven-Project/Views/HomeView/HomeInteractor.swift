@@ -25,9 +25,7 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var allUsersResponse: AllUsersResponse?
     
     func fetchData() {
-        guard let authorizedUser = authorizedUser else { return }
-        
-        worker.fetchAllGroups(token: authorizedUser.accessToken) { result in
+        worker.fetchAllGroups() { result in
             switch result {
             case .success(let response):
                 self.allGroupsResponse = response
@@ -38,7 +36,7 @@ final class HomeInteractor: HomeBusinessLogic, HomeDataStore {
             }
         }
         
-        worker.fetchAllUsers(token: authorizedUser.accessToken) { result in
+        worker.fetchAllUsers() { result in
             switch result {
             case .success(let response):
                 self.allUsersResponse = response
