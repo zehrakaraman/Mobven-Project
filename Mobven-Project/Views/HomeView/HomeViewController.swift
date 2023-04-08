@@ -64,6 +64,10 @@ final class HomeViewController: UIViewController, HTTPClient {
         
         interactor?.fetchData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+        navigationItem.backButtonTitle = ""
+    }
     
     @IBAction func searchButtonTapped(_ sender: Any) {        
     }

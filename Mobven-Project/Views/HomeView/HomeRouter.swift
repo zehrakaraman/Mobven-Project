@@ -24,6 +24,7 @@ final class HomeRouter: HomeRoutingLogic, HomeDataPassing {
     func routeToAccountProfile() {
         let storyboard = UIStoryboard(name: "AccountProfile", bundle: nil)
         let destinationView = storyboard.instantiateViewController(withIdentifier: AccountProfileViewController.identifier) as! AccountProfileViewController
+        destinationView.router?.dataStore?.account = dataStore?.authorizedUser
         viewController?.navigationController?.pushViewController(destinationView, animated: true)
     }
     

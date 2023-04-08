@@ -27,6 +27,10 @@ final class LoginInteractor: LoginBusinessLogic, LoginDataStore {
             case .success(let response):
                 self.loginResponse = response
                 guard let loginResponse = self.loginResponse else { return }
+                let accessToken = loginResponse.body.accessToken
+                
+                KeyChainManager.shared.saveData(Data(accessToken.utf8), service: KeyChainConstants.accessTokenService, account: KeyChainConstants.account)
+                
                 self.presenter?.presentLogin(response: Login.Case.Response(loginResponse: loginResponse))
             case .failure(let error):
                 print(error.localizedDescription)

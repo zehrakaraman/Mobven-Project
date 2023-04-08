@@ -21,7 +21,8 @@ enum AccountProfile {
         }
         
         struct ViewModel {
-            
+            let dateOfBirth: Date
+            let gender: String
         }
         
     }

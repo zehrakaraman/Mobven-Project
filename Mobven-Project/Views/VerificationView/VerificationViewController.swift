@@ -61,6 +61,10 @@ final class VerificationViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.backButtonTitle = ""
+    }
+    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         router?.routeToLogin()
     }

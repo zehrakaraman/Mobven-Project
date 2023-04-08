@@ -13,17 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
         guard let isDarkMode = UserDefaults.standard.object(forKey: "isDarkMode") as? Bool else { return }
-        let window = UIWindow(windowScene: windowScene)
-        let storyboard = UIStoryboard(name: "Welcome", bundle: nil)
-        let welcomeViewController = storyboard.instantiateViewController(withIdentifier: WelcomeViewController.identifier)
-        let rootViewController = UINavigationController(rootViewController: welcomeViewController)
-        window.rootViewController = rootViewController
-        rootViewController.isNavigationBarHidden = true
-        self.window = window
-        window.makeKeyAndVisible()
-        window.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
+        
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -8,27 +8,27 @@
 import Foundation
 
 public enum AllGroupsEndpoint {
-    case getAllGroups(token: String)
+    case getAllGroups
 }
 
 extension AllGroupsEndpoint: Endpoint {
     public var method: RequestMethod {
         switch self {
-        case .getAllGroups(_):
+        case .getAllGroups:
             return .get
         }
     }
     
     public var path: String {
         switch self {
-        case .getAllGroups(_):
+        case .getAllGroups:
             return "/api/v1/groups"
         }
     }
     
     public var queryItems: [URLQueryItem]? {
         switch self {
-        case .getAllGroups(_):
+        case .getAllGroups:
             return nil
         }
     }
@@ -38,9 +38,14 @@ extension AllGroupsEndpoint: Endpoint {
     }
     
     public var header: [String : String]? {
+        guard let tokenData = KeyChainManager.shared.loadData(
+            service: KeyChainConstants.accessTokenService,
+            account: KeyChainConstants.account) else { return nil }
+        guard let accessToken = String(data: tokenData, encoding: .utf8) else { return nil }
+        
         switch self {
-        case .getAllGroups(let token):
-            return ["Authorization": "Bearer \(token)"]
+        case .getAllGroups:
+            return ["Authorization": "Bearer \(accessToken)"]
         }
     }
 }

@@ -8,11 +8,14 @@
 import Foundation
 
 protocol AccountProfilePresentationLogic: AnyObject {
-    
+    func presentProfile(model: Account)
 }
 
 final class AccountProfilePresenter: AccountProfilePresentationLogic {
     
     weak var viewController: AccountProfileDisplayLogic?
     
+    func presentProfile(model: Account) {
+        viewController?.displayProfile(viewModel: model)
+    }
 }
