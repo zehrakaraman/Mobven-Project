@@ -95,9 +95,8 @@ final class LoginViewController: UIViewController {
     }
         
     @IBAction func tappedNextButton(_ sender: UIButton) {
-//        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-//        interactor?.login(email: email, password: password)
-        interactor?.login(email: "ytp2023@mobven.com", password: "YTP2023")
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        interactor?.login(email: email, password: password)
     }
 }
 
