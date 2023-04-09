@@ -13,6 +13,7 @@ extension AccountProfileViewController {
         case viewName
         case viewGender
         case viewDate
+        case viewLinked
         case editText(String?)
         case editGender(String)
         case editDate(Date)
