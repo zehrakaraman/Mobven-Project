@@ -13,6 +13,7 @@ extension AccountProfileViewController {
         case name
         case gender
         case birthOfDate
+        case linked
         
         var title: String {
             switch self {
@@ -23,6 +24,8 @@ extension AccountProfileViewController {
                 return NSLocalizedString("Gender", comment: "Gender section name")
             case .birthOfDate:
                 return NSLocalizedString("Date of birth", comment: "Date section name")
+            case .linked:
+                return NSLocalizedString("Linkedln", comment: "Linkedln section name")
             }
         }
     }

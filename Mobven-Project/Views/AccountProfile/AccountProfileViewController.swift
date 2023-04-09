@@ -22,6 +22,7 @@ class AccountProfileViewController: UIViewController {
     @IBOutlet weak var accountImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var darkModeSwitch: UISwitch!
+    @IBOutlet weak var linkedlnButton: UIButton!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
@@ -112,7 +113,7 @@ class AccountProfileViewController: UIViewController {
         
         UIView.animate(withDuration: 0.2, animations: {
             self.topConstraint.constant = 320
-            self.heightConstraint.constant = 247
+            self.heightConstraint.constant = 200
             self.view.layoutIfNeeded()
         })
         
@@ -122,7 +123,8 @@ class AccountProfileViewController: UIViewController {
     private func updateSnapshotForViewing() {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
-        snapshot.appendItems([.header(""), .viewName, .viewGender, .viewDate])
+        snapshot.appendItems([.header(""), .viewName, .viewGender, .viewDate], toSection: .view)
+//        snapshot.appendItems([.viewLinked], toSection: .linked)
         dataSource.apply(snapshot)
     }
     
@@ -133,6 +135,8 @@ class AccountProfileViewController: UIViewController {
             cell.contentConfiguration = headerConfiguration(for: cell, with: title)
         case (.view, _):
             cell.contentConfiguration = defaultConfiguration(for: cell, at: row)
+        case (.linked, .viewLinked):
+            cell.contentConfiguration = linkedConfiguration(for: cell)
         case (.name, .editText(let name)):
             cell.contentConfiguration = nameConfiguration(for: cell, with: name)
         case (.gender, .editGender(let gender)):
@@ -145,6 +149,13 @@ class AccountProfileViewController: UIViewController {
     }
     
     private func section(for indexPath: IndexPath) -> Section {
+        if !isEditing && indexPath.section != 0 {
+            guard let section = Section(rawValue: 4) else {
+                fatalError("Unable to find matching section")
+            }
+            return section
+        }
+        
         let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
         guard let section = Section(rawValue: sectionNumber) else {
             fatalError("Unable to find matching section")
@@ -172,6 +183,7 @@ class AccountProfileViewController: UIViewController {
         accountImage.backgroundColor = UIColor(named: "Purple - Soft")
         collectionView.backgroundColor = UIColor(named: "White")
         collectionView.layer.cornerRadius = 50.0
+        collectionView.allowsSelection = false
         
         guard var isDarkMode = UserDefaults.standard.object(forKey: "isDarkMode") as? Bool else { return }
         darkModeSwitch.setOn(isDarkMode, animated: true)
@@ -194,6 +206,10 @@ class AccountProfileViewController: UIViewController {
             window.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
         }
         UserDefaults.standard.set(isDarkMode, forKey: "isDarkMode")
+    }
+    
+    @IBAction func linkedlnButtonTapped(_ sender: UIButton) {
+        router?.routeToWeb()
     }
 }
 

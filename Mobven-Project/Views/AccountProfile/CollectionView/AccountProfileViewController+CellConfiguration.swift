@@ -8,6 +8,14 @@
 import UIKit
 
 extension AccountProfileViewController {
+    func headerConfiguration(for cell: UICollectionViewListCell, with title: String) -> UIListContentConfiguration {
+        var contentConfiguration = cell.defaultContentConfiguration()
+        contentConfiguration.text = title
+        contentConfiguration.textProperties.font = UIFont(name: "Montserrat-Regular", size: 10)!
+        contentConfiguration.textProperties.color = UIColor(named: "Blue - Dark")!
+        return contentConfiguration
+    }
+    
     func defaultConfiguration(for cell: UICollectionViewListCell, at row: Row) -> UIListContentConfiguration {
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = text(for: row)
@@ -19,11 +27,8 @@ extension AccountProfileViewController {
         return contentConfiguration
     }
     
-    func headerConfiguration(for cell: UICollectionViewListCell, with title: String) -> UIListContentConfiguration {
-        var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = title
-        contentConfiguration.textProperties.font = UIFont(name: "Montserrat-Regular", size: 10)!
-        contentConfiguration.textProperties.color = UIColor(named: "Blue - Dark")!
+    func linkedConfiguration(for cell: UICollectionViewListCell) -> ButtonContentView.Configuration {
+        var contentConfiguration = cell.buttonConfiguration()
         return contentConfiguration
     }
     

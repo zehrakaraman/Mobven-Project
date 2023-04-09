@@ -70,8 +70,8 @@
                                 <rect key="frame" x="30" y="597" width="354" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-15-ZOz">
-                                        <rect key="frame" x="0.0" y="9.5" width="294" height="12.5"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="10"/>
+                                        <rect key="frame" x="0.0" y="8" width="294" height="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
                                         <color key="textColor" name="Blue - Dark"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -88,6 +88,17 @@
                                     <constraint firstAttribute="height" constant="31" id="yQt-Xu-ZeT"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzR-2F-WSh">
+                                <rect key="frame" x="18" y="633" width="78" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Linkedln">
+                                    <fontDescription key="titleFontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                                    <color key="baseForegroundColor" name="Blue - Dark"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="linkedlnButtonTapped:" destination="nxe-uw-h5I" eventType="touchUpInside" id="gfp-by-zIW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acR-sl-ate"/>
                         <color key="backgroundColor" name="Purple - Soft"/>
@@ -102,10 +113,12 @@
                             <constraint firstItem="x8c-Az-Bee" firstAttribute="bottom" secondItem="LcX-Ys-Fx2" secondAttribute="bottom" constant="-30" id="Icy-5G-dpn"/>
                             <constraint firstItem="LcX-Ys-Fx2" firstAttribute="trailing" secondItem="acR-sl-ate" secondAttribute="trailing" id="Jjs-jS-pqG"/>
                             <constraint firstItem="acR-sl-ate" firstAttribute="trailing" secondItem="x8c-Az-Bee" secondAttribute="trailing" id="KaL-YM-Uba"/>
+                            <constraint firstItem="hzR-2F-WSh" firstAttribute="top" secondItem="TdR-fz-no6" secondAttribute="bottom" constant="5" id="N9f-pi-wgl"/>
                             <constraint firstItem="LcX-Ys-Fx2" firstAttribute="top" secondItem="2EP-7D-MPX" secondAttribute="bottom" id="bao-VU-nR1"/>
                             <constraint firstItem="TdR-fz-no6" firstAttribute="top" secondItem="LcX-Ys-Fx2" secondAttribute="bottom" constant="30" id="dC0-wT-FW0"/>
                             <constraint firstItem="TdR-fz-no6" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="30" id="lIL-BL-52L"/>
                             <constraint firstItem="2EP-7D-MPX" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" id="sdg-Eg-f0c"/>
+                            <constraint firstItem="hzR-2F-WSh" firstAttribute="leading" secondItem="acR-sl-ate" secondAttribute="leading" constant="18" id="ukD-vW-YCR"/>
                             <constraint firstItem="lnh-Zh-yUz" firstAttribute="top" secondItem="2EP-7D-MPX" secondAttribute="bottom" constant="-30" id="zUk-zt-8wr"/>
                         </constraints>
                     </view>
@@ -114,12 +127,62 @@
                         <outlet property="collectionView" destination="LcX-Ys-Fx2" id="yf2-re-sBa"/>
                         <outlet property="darkModeSwitch" destination="yft-XZ-PuK" id="mHG-3M-HFU"/>
                         <outlet property="heightConstraint" destination="QVq-HQ-0yM" id="o0y-Uh-hoy"/>
+                        <outlet property="linkedlnButton" destination="hzR-2F-WSh" id="Vhy-6H-hyr"/>
                         <outlet property="topConstraint" destination="zcf-VX-OZo" id="Byr-TM-rNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZo-gs-e4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="105.79710144927537" y="27.455357142857142"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bdv-Ye-ECm">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="APk-sp-mee" customClass="WebViewController" customModule="MobvenDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MoU-T1-39S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-9N-vDr">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" name="White"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="h2D-B6-cJU">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cS5-Jl-cL1">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="waU-li-UFq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eq0-9N-vDr" firstAttribute="leading" secondItem="waU-li-UFq" secondAttribute="leading" id="54i-Ue-Tit"/>
+                            <constraint firstItem="cS5-Jl-cL1" firstAttribute="bottom" secondItem="waU-li-UFq" secondAttribute="bottom" id="8s4-wM-c96"/>
+                            <constraint firstItem="Eq0-9N-vDr" firstAttribute="top" secondItem="waU-li-UFq" secondAttribute="top" id="DcQ-EA-1K1"/>
+                            <constraint firstItem="h2D-B6-cJU" firstAttribute="centerX" secondItem="MoU-T1-39S" secondAttribute="centerX" id="Jut-cX-sib"/>
+                            <constraint firstItem="h2D-B6-cJU" firstAttribute="centerY" secondItem="MoU-T1-39S" secondAttribute="centerY" id="Rkx-Mz-8nY"/>
+                            <constraint firstItem="waU-li-UFq" firstAttribute="bottom" secondItem="Eq0-9N-vDr" secondAttribute="bottom" id="Vfv-LD-bLY"/>
+                            <constraint firstItem="cS5-Jl-cL1" firstAttribute="leading" secondItem="waU-li-UFq" secondAttribute="leading" id="Z4w-T2-ZMa"/>
+                            <constraint firstItem="waU-li-UFq" firstAttribute="trailing" secondItem="Eq0-9N-vDr" secondAttribute="trailing" id="l0r-vt-64Y"/>
+                            <constraint firstItem="cS5-Jl-cL1" firstAttribute="trailing" secondItem="waU-li-UFq" secondAttribute="trailing" id="oMG-ff-qCX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ux1-Ro-vaN"/>
+                    <connections>
+                        <outlet property="indicator" destination="h2D-B6-cJU" id="gjn-XK-ED3"/>
+                        <outlet property="toolbar" destination="cS5-Jl-cL1" id="IFc-RX-0fe"/>
+                        <outlet property="webView" destination="Eq0-9N-vDr" id="WVb-Ey-2g0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOx-3s-em7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="27"/>
         </scene>
     </scenes>
     <resources>
