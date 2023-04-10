@@ -81,21 +81,67 @@ final class ChatViewController: UIViewController {
         router.dataStore = interactor
     }
     
-    private func compositionalLayoutConfiguration() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+    private func generateCompositonalLayout(imageCount: Int) -> UICollectionViewLayout {
+        switch imageCount {
+        case 1: return compositionalLayoutConfiguration1()
+        case 2: return compositionalLayoutConfiguration2()
+        case 3: return compositionalLayoutConfiguration3()
+        default: return compositionalLayoutConfiguration4()
+        }
+    }
+    
+    private func compositionalLayoutConfiguration1() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        let groupLayout = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let groupLayout = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupLayout, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
     
-    func updateView(images: [UIImage]?) {
+    private func compositionalLayoutConfiguration2() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        let groupLayout = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupLayout, subitems: [item, item])
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
+    
+    private func compositionalLayoutConfiguration3() -> UICollectionViewLayout {
+        let sizeForDouble = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let doubleItems = NSCollectionLayoutItem(layoutSize: sizeForDouble)
+        doubleItems.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        let groupSizeForDouble = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSizeForDouble, subitems: [doubleItems, doubleItems])
+        let sizeForSingle = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+        let singleItem = NSCollectionLayoutItem(layoutSize: sizeForSingle)
+        singleItem.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)), subitems: [group, singleItem])
+        let section = NSCollectionLayoutSection(group: mainGroup)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
+    
+    private func compositionalLayoutConfiguration4() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        let groupLayout = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupLayout, subitems: [item, item])
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
+    }
+    
+    private func updateView(images: [UIImage]) {
         self.images = images
         
-        collectionView.collectionViewLayout = compositionalLayoutConfiguration()
+        collectionView.collectionViewLayout = generateCompositonalLayout(imageCount: images.count)
         collectionView.reloadData()
     }
     
@@ -109,31 +155,11 @@ final class ChatViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Photo & Video Library", style: .default, handler: { _ in
-            self.openLibrary()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        present(alert, animated: true, completion: nil)
+        router?.routeToPHPicker()
     }
     
     @IBAction func emojiButtonTapped(_ sender: Any) {
     }
-    
-    func openLibrary() {
-        var config = PHPickerConfiguration()
-        config.selectionLimit = 10
-        let pickerController = PHPickerViewController(configuration: config)
-        pickerController.delegate = self
-        present(pickerController, animated: true)
-    }
-    
 }
 
 extension ChatViewController: ChatDisplayLogic {
@@ -144,30 +170,42 @@ extension ChatViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
         
-        var images: [UIImage] = []
-        for result in results {
-            result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
-                guard let image = object as? UIImage else { return }
-                DispatchQueue.main.async {
+        let imageItems = results
+                .map { $0.itemProvider }
+                .filter { $0.canLoadObject(ofClass: UIImage.self) }
+            
+        let dispatchGroup = DispatchGroup()
+        var images = [UIImage]()
+        
+        for imageItem in imageItems {
+            dispatchGroup.enter() 
+            
+            imageItem.loadObject(ofClass: UIImage.self) { image, _ in
+                if let image = image as? UIImage {
                     images.append(image)
                 }
+                dispatchGroup.leave()
             }
         }
-        updateView(images: images)
+        
+        dispatchGroup.notify(queue: .main) {
+            self.updateView(images: images)
+        }
     }
 }
 
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let images = images else { return 0 }
-        return images.count
+        return images.count >= 4 ? 4 : images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatCollectionViewCell.identifier, for: indexPath) as? ChatCollectionViewCell,
-              let image = images?[indexPath.item]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatCollectionViewCell.identifier, for: indexPath) as? ChatCollectionViewCell
             else { return UICollectionViewCell() }
-        cell.imageView.image = image
+        guard let images else { return cell }
+        
+        cell.imageView.image = images[indexPath.item]
         return cell
     }
 }
