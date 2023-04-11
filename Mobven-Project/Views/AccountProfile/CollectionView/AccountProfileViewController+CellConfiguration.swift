@@ -28,7 +28,7 @@ extension AccountProfileViewController {
     }
     
     func linkedConfiguration(for cell: UICollectionViewListCell) -> ButtonContentView.Configuration {
-        var contentConfiguration = cell.buttonConfiguration()
+        let contentConfiguration = cell.buttonConfiguration()
         return contentConfiguration
     }
     

@@ -15,8 +15,8 @@ extension AccountProfileViewController {
         case viewDate
         case viewLinked
         case editText(String?)
-        case editGender(String)
-        case editDate(Date)
+        case editGender(String?)
+        case editDate(Date?)
         
         var font: UIFont {
             switch self {

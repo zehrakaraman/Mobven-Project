@@ -22,7 +22,7 @@ class GenderContentView: UIView, UIContentView {
     }
     
     let textField = UITextField()
-    let gender = ["Gender", "Male", "Female"]
+    let gender = ["Male", "Female"]
     var configuration: UIContentConfiguration {
         didSet {
             configure(configuration: configuration)
@@ -58,6 +58,9 @@ class GenderContentView: UIView, UIContentView {
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.backgroundColor = UIColor(named: "Purple - Light")
+        
+        let row = textField.text == "Male" ? 0 : 1
+        pickerView.selectRow(row, inComponent: 0, animated: true)
         textField.inputView = pickerView
     }
 }

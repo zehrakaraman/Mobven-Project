@@ -103,8 +103,8 @@ class AccountProfileViewController: UIViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([.name, .gender, .birthOfDate])
         snapshot.appendItems([.header(Section.name.title), .editText(router?.dataStore?.account?.fullName)], toSection: .name)
-        snapshot.appendItems([.header(Section.gender.title), .editGender((router?.dataStore?.profileData?.gender)!)], toSection: .gender)
-        snapshot.appendItems([.header(Section.birthOfDate.title), .editDate((router?.dataStore?.profileData?.dateOfBirth)!)], toSection: .birthOfDate)
+        snapshot.appendItems([.header(Section.gender.title), .editGender(router?.dataStore?.profileData?.gender)], toSection: .gender)
+        snapshot.appendItems([.header(Section.birthOfDate.title), .editDate(router?.dataStore?.profileData?.dateOfBirth)], toSection: .birthOfDate)
         dataSource.apply(snapshot)
     }
     
@@ -124,7 +124,6 @@ class AccountProfileViewController: UIViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
         snapshot.appendItems([.header(""), .viewName, .viewGender, .viewDate], toSection: .view)
-//        snapshot.appendItems([.viewLinked], toSection: .linked)
         dataSource.apply(snapshot)
     }
     
@@ -140,8 +139,10 @@ class AccountProfileViewController: UIViewController {
         case (.name, .editText(let name)):
             cell.contentConfiguration = nameConfiguration(for: cell, with: name)
         case (.gender, .editGender(let gender)):
+            guard let gender else { return }
             cell.contentConfiguration = genderConfiguration(for: cell, with: gender)
         case (.birthOfDate, .editDate(let date)):
+            guard let date else { return }
             cell.contentConfiguration = dateConfiguration(for: cell, with: date)
         default:
             fatalError("Unexpected combination of section and row.")
@@ -149,13 +150,6 @@ class AccountProfileViewController: UIViewController {
     }
     
     private func section(for indexPath: IndexPath) -> Section {
-        if !isEditing && indexPath.section != 0 {
-            guard let section = Section(rawValue: 4) else {
-                fatalError("Unable to find matching section")
-            }
-            return section
-        }
-        
         let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
         guard let section = Section(rawValue: sectionNumber) else {
             fatalError("Unable to find matching section")

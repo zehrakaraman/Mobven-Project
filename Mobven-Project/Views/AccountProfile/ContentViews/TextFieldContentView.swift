@@ -36,7 +36,7 @@ class TextFieldContentView: UIView, UIContentView {
         self.configuration = configuration
         super.init(frame: .zero)
         addPinnedSubview(textField, insets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
-        textField.addTarget(self, action: #selector(didChange(_:)), for: .valueChanged)
+        textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged)
         textField.clearButtonMode = .whileEditing
         textField.backgroundColor = UIColor(named: "Purple - Soft")
         textField.cornerRadius = 12.0
@@ -61,6 +61,6 @@ class TextFieldContentView: UIView, UIContentView {
 
 extension UICollectionViewListCell {
     func textFieldConfiguration() -> TextFieldContentView.Configuration {
-        TextFieldContentView.Configuration()
+        return TextFieldContentView.Configuration()
     }
 }
