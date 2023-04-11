@@ -25,17 +25,17 @@ final class ChatViewController: UIViewController {
     var interactor: ChatBusinessLogic?
     var router: (ChatRoutingLogic & ChatDataPassing)?
     
-    var images: [UIImage]? {
-        didSet {
-            if let images = images, !images.isEmpty {
-                collectionView.isHidden = false
-                emptyViewText.isHidden = true
-            } else {
-                collectionView.isHidden = true
-                emptyViewText.isHidden = false
-            }
-        }
-    }
+    var images: [UIImage] = []
+//        didSet {
+//            if let images = images, !images.isEmpty {
+//                collectionView.isHidden = false
+//                emptyViewText.isHidden = true
+//            } else {
+//                collectionView.isHidden = true
+//                emptyViewText.isHidden = false
+//            }
+//        }
+//    }
     
     // MARK: Object lifecycle
     
@@ -196,14 +196,14 @@ extension ChatViewController: PHPickerViewControllerDelegate {
 
 extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let images = images else { return 0 }
+//        guard let images = images else { return 0 }
         return images.count >= 4 ? 4 : images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatCollectionViewCell.identifier, for: indexPath) as? ChatCollectionViewCell
             else { return UICollectionViewCell() }
-        guard let images else { return cell }
+//        guard let images else { return cell }
         
         cell.imageView.image = images[indexPath.item]
         return cell
