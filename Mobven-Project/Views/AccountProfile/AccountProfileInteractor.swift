@@ -82,28 +82,4 @@ final class AccountProfileInteractor: AccountProfileBusinessLogic, AccountProfil
             }
         }
     }
-    
-//    func saveProfile(dateOfBirth: Date, gender: String) {
-//        if let currentProfileData = profileData {
-//            currentProfileData.dateOfBirth = dateOfBirth
-//            currentProfileData.gender = gender
-//            worker.updateProfile { [weak self] result in
-//                switch result {
-//                case .success:
-//                    self?.presenter?.presentProfile(model: currentProfileData)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-//        } else {
-//            worker.createProfile(dateOfBirth: dateOfBirth) { [weak self] result in
-//                switch result {
-//                case .success(let profileData):
-//                    self?.profileData = profileData
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-//        }
-//    }
 }

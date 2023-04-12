@@ -39,7 +39,7 @@ final class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTextField([nameTextField])
+        nameTextField.configure()
     
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     
@@ -53,9 +53,6 @@ final class RegisterViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.backButtonTitle = ""
-    }
-    
-    @IBAction func imageButtonTapped(_ sender: UIButton) {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

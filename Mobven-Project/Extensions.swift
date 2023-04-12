@@ -18,13 +18,10 @@ extension UIView {
     }
 }
 
-extension UIViewController: UITextFieldDelegate {
-    func configureTextField(_ textFields: [UITextField]) {
-        textFields.forEach {
-            $0.delegate = self
-            $0.cornerRadius = 17.0
-            $0.borderStyle = .none
-        }
+extension UITextField {
+    func configure() {
+        self.cornerRadius = 17.0
+        self.borderStyle = .none
     }
 }
 

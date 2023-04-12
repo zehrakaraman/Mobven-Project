@@ -14,5 +14,4 @@ protocol WelcomePresentationLogic: AnyObject {
 final class WelcomePresenter: WelcomePresentationLogic {
     
     weak var viewController: WelcomeDisplayLogic?
-    
 }

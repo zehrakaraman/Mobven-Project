@@ -12,8 +12,6 @@ protocol WelcomeDisplayLogic: AnyObject {
 }
 
 final class WelcomeViewController: UIViewController {
-    static let identifier = "WelcomeViewController"
-    
     var interactor: WelcomeBusinessLogic?
     var router: (WelcomeRoutingLogic & WelcomeDataPassing)?
     
@@ -64,3 +62,4 @@ final class WelcomeViewController: UIViewController {
 extension WelcomeViewController: WelcomeDisplayLogic {
     
 }
+

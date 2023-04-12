@@ -42,7 +42,6 @@ public extension HTTPClient {
                     return completion(.failure(.unknown))
                 }
             } catch {
-                print("Error >> " + error.localizedDescription)
                 return completion(.failure(.decode))
             }
         }
