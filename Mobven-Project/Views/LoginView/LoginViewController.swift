@@ -41,7 +41,8 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTextField([emailTextField, passwordTextField])
+        emailTextField.configure()
+        passwordTextField.configure()
         configureLabel()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
