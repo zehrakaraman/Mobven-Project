@@ -63,7 +63,7 @@ final class ChatViewController: UIViewController {
         collectionView.cornerRadius = 20.0
         collectionView.isHidden = true
         emptyViewText.isHidden = false
-        configureTextField([messageTextField])
+        messageTextField.configure()
     }
     
     // MARK: Setup

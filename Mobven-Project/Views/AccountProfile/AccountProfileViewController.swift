@@ -139,10 +139,16 @@ class AccountProfileViewController: UIViewController {
         case (.name, .editText(let name)):
             cell.contentConfiguration = nameConfiguration(for: cell, with: name)
         case (.gender, .editGender(let gender)):
-            guard let gender else { return }
+            guard let gender else {
+                cell.contentConfiguration = genderConfiguration(for: cell, with: "")
+                return
+            }
             cell.contentConfiguration = genderConfiguration(for: cell, with: gender)
         case (.birthOfDate, .editDate(let date)):
-            guard let date else { return }
+            guard let date else {
+                cell.contentConfiguration = dateConfiguration(for: cell, with: Date.now)
+                return
+            }
             cell.contentConfiguration = dateConfiguration(for: cell, with: date)
         default:
             fatalError("Unexpected combination of section and row.")

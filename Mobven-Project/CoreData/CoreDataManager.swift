@@ -57,4 +57,16 @@ class CoreDataManager {
             completion(.failure(.update))
         }
     }
+    
+    func delete(objects: [some NSManagedObject], completion: @escaping ((Result<Void, CoreDataError>) -> Void)) {
+            do {
+                for object in objects {
+                    context.delete(object)
+                }
+                try context.save()
+                completion(.success(()))
+            } catch {
+                completion(.failure(.unknown))
+            }
+        }
 }
